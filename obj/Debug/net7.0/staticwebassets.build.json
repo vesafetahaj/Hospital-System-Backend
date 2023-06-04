@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "w9inVnJQHhGL+jLrRu2nrzbIIFet2cNTyDdiSusv0RQ=",
+  "Hash": "58uREp02CCID3P/dmpKiuOWTZ0WqUYtuFnYJ3JNzaCY=",
   "Source": "Hospital System Management",
   "BasePath": "_content/Hospital System Management",
   "Mode": "Default",
@@ -1103,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\login-forma-color.jpg",
+      "SourceId": "Hospital System Management",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\",
+      "BasePath": "_content/Hospital System Management",
+      "RelativePath": "images/login-forma-color.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\login-forma-color.jpg"
     },
     {
       "Identity": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\js\\site.js",

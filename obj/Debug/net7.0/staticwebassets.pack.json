@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\login-forma-color.jpg",
+      "PackagePath": "staticwebassets\\images\\login-forma-color.jpg"
+    },
+    {
       "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
