@@ -1160,3 +1160,4 @@ C:\Users\fursine\Desktop\Lab\Hospital-System-Backend\obj\Debug\net7.0\refint\Hos
 C:\Users\fursine\Desktop\Lab\Hospital-System-Backend\obj\Debug\net7.0\Hospital System Management.pdb
 C:\Users\fursine\Desktop\Lab\Hospital-System-Backend\obj\Debug\net7.0\Hospital System Management.genruntimeconfig.cache
 C:\Users\fursine\Desktop\Lab\Hospital-System-Backend\obj\Debug\net7.0\ref\Hospital System Management.dll
+D:\Desktop\Hospital LAB1\Hospital System Management\Hospital System Management\bin\Debug\net7.0\Areas\Identity\Pages\Account\package-lock.json
