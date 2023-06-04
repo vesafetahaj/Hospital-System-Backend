@@ -12,7 +12,7 @@ build_property.RootNamespace = Hospital_System_Management
 build_property.ProjectDir = D:\Desktop\Hospital LAB1\Hospital System Management\Hospital System Management\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = D:\Desktop\Hospital LAB1\Hospital System Management\Hospital System Management
 build_property._RazorSourceGeneratorDebug = 
 

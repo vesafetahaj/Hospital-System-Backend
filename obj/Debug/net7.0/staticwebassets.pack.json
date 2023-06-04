@@ -13,8 +13,20 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\home.png",
+      "PackagePath": "staticwebassets\\images\\home.png"
+    },
+    {
       "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\login-forma-color.jpg",
       "PackagePath": "staticwebassets\\images\\login-forma-color.jpg"
+    },
+    {
+      "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\logo-black-on-transparent-background.png",
+      "PackagePath": "staticwebassets\\images\\logo-black-on-transparent-background.png"
+    },
+    {
+      "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\menu.png",
+      "PackagePath": "staticwebassets\\images\\menu.png"
     },
     {
       "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\js\\site.js",

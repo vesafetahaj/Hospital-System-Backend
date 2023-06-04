@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QaSWrLamu5RQBlg4n4qHllhKUR89dVF5d+RUZUsO8TQXLC6x/ksAfLvTBjMEuKROLf/oXMxv3RIerYUlQkgFvg==",
+  "dgSpecHash": "8khT09gWAMQ4LQcSYqygi9jC5cF4Masp1fz4DerZv5pSkqCUPJWqMgIz9kuBopdbpGB6/S5jJQravAg5tgijWA==",
   "success": true,
   "projectFilePath": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\Hospital System Management.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,8 @@
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\7.0.3\\microsoft.aspnetcore.diagnostics.entityframeworkcore.7.0.3.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\7.0.5\\microsoft.aspnetcore.identity.entityframeworkcore.7.0.5.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\7.0.5\\microsoft.aspnetcore.identity.ui.7.0.5.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\6.0.0\\microsoft.aspnetcore.mvc.razor.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\7.0.5\\microsoft.aspnetcore.mvc.razor.runtimecompilation.7.0.5.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.11\\microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.build\\17.3.2\\microsoft.build.17.3.2.nupkg.sha512",

@@ -10,6 +10,81 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Hospital_System_Management.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Gurmukhi&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <style>
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: lightblue;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+    }
+
+    .sidenav a {
+        padding: 28px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #fff;
+        display: block;
+        transition: 0.3s;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: bold;
+    }
+
+    .sidenav img {
+        width: 32px;
+        padding-right: 10px;
+    }
+
+    .sidenav a:hover {
+        color: #aff097;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    #main {
+        transition: margin-left .5s;
+        padding-left: 50px;
+        margin-top: -15px;
+    }
+
+    #main>h1 {
+        font-family: 'Anek Gurmukhi', sans-serif;
+        color: lightblue;
+        display: inline;
+        margin-left:60px;
+    }
+
+    #menu {
+        width: 30px;
+        cursor: pointer;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+
+    #logo {
+        width: 100px;
+        margin-top: -55px;
+        margin-left: 10px;
+    }
+
+   
+</style>
+
 </head>
 <body>
     <header>
@@ -22,11 +97,33 @@
         </nav>
 
     </header>
-    <main>
-        <div class="text-center">
-            <h1 class="display-4">Welcome Administrator</h1>
-        </div>
-    </main>
+     <div id="mySidenav" class="sidenav bg-success">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <img src="./images/logo-black-on-transparent-background.png" alt="" id="logo">
+        <a href="#"><img src="./images/home.png" id="home">Home</a>
+        <a href="#"><img src="./images/home.png">Contact Forms</a>
+        <a href="#"><img src="./images/home.png">Doctors</a>
+        <a href="#"><img src="./images/home.png">Patients</a>
+        <a href="#"><img src="./images/home.png">Appointments</a>
+    </div>
+    <span onclick="openNav()"><img src="./images/menu.png" alt="" srcset="" id="menu"></span>
+    <div id="main">
+        <h1>Welcome to your dashboard!</h1>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.getElementById("profile").style.transform = "translateX(50px)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("profile").style.transform = "translateX(0)";
+        }
+    </script>
+
 
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
