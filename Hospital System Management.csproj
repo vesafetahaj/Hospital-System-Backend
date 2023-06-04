@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <None Include="wwwroot\images\login-forma-color.jpg" />
-    <None Include="wwwroot\images\menu.png" />
   </ItemGroup>
 
   <ItemGroup>

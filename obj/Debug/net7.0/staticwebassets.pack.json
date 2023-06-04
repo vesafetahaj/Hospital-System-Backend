@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\appointment.png",
+      "PackagePath": "staticwebassets\\images\\appointment.png"
+    },
+    {
+      "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\doctor.png",
+      "PackagePath": "staticwebassets\\images\\doctor.png"
+    },
+    {
       "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\home.png",
       "PackagePath": "staticwebassets\\images\\home.png"
     },
@@ -25,8 +33,24 @@
       "PackagePath": "staticwebassets\\images\\logo-black-on-transparent-background.png"
     },
     {
-      "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\menu.png",
-      "PackagePath": "staticwebassets\\images\\menu.png"
+      "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\menublue.png",
+      "PackagePath": "staticwebassets\\images\\menublue.png"
+    },
+    {
+      "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\patient.png",
+      "PackagePath": "staticwebassets\\images\\patient.png"
+    },
+    {
+      "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\phone.png",
+      "PackagePath": "staticwebassets\\images\\phone.png"
+    },
+    {
+      "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\sunrisecare-hospital-low-resolution-logo-color-on-transparent-background.png",
+      "PackagePath": "staticwebassets\\images\\sunrisecare-hospital-low-resolution-logo-color-on-transparent-background.png"
+    },
+    {
+      "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\sunrisecare-hospital-low-resolution-logo-white-on-transparent-background.png",
+      "PackagePath": "staticwebassets\\images\\sunrisecare-hospital-low-resolution-logo-white-on-transparent-background.png"
     },
     {
       "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\js\\site.js",

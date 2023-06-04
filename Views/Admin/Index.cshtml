@@ -6,6 +6,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <title>@ViewData["Title"] - SunRiseCare Hospital</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -15,20 +16,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anek+Gurmukhi&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
     <style>
-    .sidenav {
+    #mySidenav {
         height: 100%;
         width: 0;
         position: fixed;
         z-index: 1;
         top: 0;
         left: 0;
-        background-color: lightblue;
+        background-color:#9abddc;
         overflow-x: hidden;
         padding-top: 60px;
         transition: 0.5s;
     }
 
-    .sidenav a {
+   #mySidenav a {
         padding: 28px 8px 8px 32px;
         text-decoration: none;
         font-size: 25px;
@@ -39,16 +40,16 @@
         font-weight: bold;
     }
 
-    .sidenav img {
+    #mySidenav img {
         width: 32px;
         padding-right: 10px;
     }
 
-    .sidenav a:hover {
-        color: #aff097;
+   #mySidenav a:hover {
+       color: #e5f3fd;
     }
 
-    .sidenav .closebtn {
+    #mySidenav .closebtn {
         position: absolute;
         top: 0;
         right: 25px;
@@ -64,7 +65,7 @@
 
     #main>h1 {
         font-family: 'Anek Gurmukhi', sans-serif;
-        color: lightblue;
+        color: #aecce4;
         display: inline;
         margin-left:60px;
     }
@@ -77,9 +78,8 @@
     }
 
     #logo {
-        width: 100px;
-        margin-top: -55px;
-        margin-left: 10px;
+        transition: transform 0.3s ease;
+        width: 180px;
     }
 
    
@@ -90,6 +90,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
+                <img src="./images/sunrisecare-hospital-low-resolution-logo-color-on-transparent-background.png" alt="" id="logo">
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
                     <partial name="_LoginPartial" />
                 </div>
@@ -97,16 +98,16 @@
         </nav>
 
     </header>
-     <div id="mySidenav" class="sidenav bg-success">
+     <div id="mySidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <img src="./images/logo-black-on-transparent-background.png" alt="" id="logo">
+       
         <a href="#"><img src="./images/home.png" id="home">Home</a>
-        <a href="#"><img src="./images/home.png">Contact Forms</a>
-        <a href="#"><img src="./images/home.png">Doctors</a>
-        <a href="#"><img src="./images/home.png">Patients</a>
-        <a href="#"><img src="./images/home.png">Appointments</a>
+        <a href="#"><img src="./images/phone.png">Contact Forms</a>
+        <a href="#"><img src="./images/doctor.png">Doctors</a>
+        <a href="#"><img src="./images/patient.png">Patients</a>
+        <a href="#"><img src="./images/appointment.png">Appointments</a>
     </div>
-    <span onclick="openNav()"><img src="./images/menu.png" alt="" srcset="" id="menu"></span>
+    <span onclick="openNav()"><img src="./images/menublue.png" alt="" srcset="" id="menu"></span>
     <div id="main">
         <h1>Welcome to your dashboard!</h1>
     </div>
@@ -114,13 +115,13 @@
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
             document.getElementById("main").style.marginLeft = "250px";
-            document.getElementById("profile").style.transform = "translateX(50px)";
+            document.getElementById("logo").style.transform = "translateX(250px)";
         }
 
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
-            document.getElementById("profile").style.transform = "translateX(0)";
+            document.getElementById("logo").style.transform = "translateX(0)";
         }
     </script>
 
