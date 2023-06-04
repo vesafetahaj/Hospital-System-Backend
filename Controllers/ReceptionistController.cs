@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Hospital_System_Management.Controllers
 {
-    [Authorize(Roles ="Admin")]
-    public class AdminController : Controller
+    [Authorize(Roles ="receptionist")]
+    public class ReceptionistController : Controller
     {
         public IActionResult Index()
         {

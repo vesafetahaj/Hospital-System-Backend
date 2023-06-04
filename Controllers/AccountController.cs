@@ -22,53 +22,15 @@ namespace Hospital_System_Management.Controllers
         }
 
         [HttpGet]
-        public IActionResult Login()
+        [AllowAnonymous]
+        public ActionResult Login(string returnUrl)
         {
+            ViewBag.ReturnUrl = returnUrl;
             return View();
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl)
-        {
-            if (ModelState.IsValid)
-            {
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
-                if (result.Succeeded)
-                {
-                    var user = await _userManager.FindByEmailAsync(model.Email);
-                    var roles = await _userManager.GetRolesAsync(user);
 
-                    if (roles.Contains("Admin"))
-                    {
-                        return RedirectToAction("AdminDashboard", "Admin");
-                    }
-                    else if (roles.Contains("Doctor"))
-                    {
-                        return RedirectToAction("DoctorDashboard", "Doctor");
-                    }
-                    else if (roles.Contains("Patient"))
-                    {
-                        return RedirectToAction("PatientDashboard", "Patient");
-                    }
-                    else if (roles.Contains("Receptionist"))
-                    {
-                        return RedirectToAction("ReceptionistDashboard", "Receptionist");
-                    }
-                    else
-                    {
-                        // Handle other roles or scenarios
-                        return RedirectToAction("Index", "Home");
-                    }
-                }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                }
-            }
-
-            return View(model);
-        }
-
+       
         [HttpGet]
         public IActionResult Register()
         {

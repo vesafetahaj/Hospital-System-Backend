@@ -44,7 +44,7 @@ app.MapControllerRoute(
 
 app.MapControllerRoute(
     name: "admin",
-    pattern: "{controller=Account}/{action=AdminDashboard}/{id?}");
+    pattern: "{controller=Admin}/{action=Index}/{id?}");
 
 
 
