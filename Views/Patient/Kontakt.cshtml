@@ -1,6 +1,7 @@
 ﻿@{
     Layout = "~/Views/Shared/_PatientLayout.cshtml";
 }
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 <style>
 
     * {
@@ -10,7 +11,7 @@
     }
 
     body {
-        background: rgb(176,224,230);
+        background: white;
     }
 
     body, input, textarea, a {
@@ -57,18 +58,19 @@
     }
 
     .info-details {
+        margin-top:20px;
         list-style: none;
         margin: 60px 0;
     }
 
         .info-details li {
-            margin-top: 25px;
+            margin-top: -10px;
             font-size: 18px;
             color: #fff;
         }
 
             .info-details li i {
-                background: #B60112;
+                background: rgb(30,144,255);
                 padding: 12px;
                 border-radius: 50%;
                 margin-right: 5px;
@@ -80,13 +82,14 @@
             }
 
                 .info-details li a:hover {
-                    color: #61010b;
+                    color: #rgb(30,144,255);
                 }
 
     .social {
         list-style: none;
         text-align: center;
         margin: 20px 0px;
+       
     }
 
         .social li {
@@ -94,7 +97,7 @@
         }
 
             .social li i {
-                background: #B60112;
+                background: #rgb(30,144,255);
                 color: #fff;
                 padding: 15px;
                 font-size: 20px;
@@ -170,15 +173,15 @@
         cursor: pointer;
         color: #fff;
         text-align: center;
-        background: #B60112;
+        background: lightblue;
         box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffff;
         transition: .5s;
     }
 
         .submit-button:hover {
-            background: #61010b;
+            background: rgb(30,144,255);
         }
-        </style>
+</style>
 <div id="main">
     <section id="section">
         <div class="box">
@@ -196,12 +199,12 @@
                     <br>
                     <li>
                         <i class="fas fa-paper-plane"></i>
-                        <span>Email:</span> <a href="mailto: info@gmail.com">em_info@gmail.com</a>
+                        <span>Email:</span> <a href="mailto: info@gmail.com">sunrisecare_info@gmail.com</a>
                     </li>
                     <br>
                     <li>
                         <i class="fas fa-globe"></i>
-                        <span>Website:</span> <a href="https: //yoursite.com">e.m@gmail.com</a>
+                        <span>Website:</span> <a href="https: //yoursite.com">SunriseCare.m@gmail.com</a>
                     </li>
                 </ul>
                 <ul class="social">
@@ -228,7 +231,7 @@
                 </ul>
             </div>
             <div class="form">
-                <form action="" method="" onsubmit="" name="mesazhi">
+                <form action="#" method="" onsubmit="" name="mesazhi">
                     <h2 class="form-title">Send us a message</h2>
                     <div class="form-fields">
                         <div class="form-group">
