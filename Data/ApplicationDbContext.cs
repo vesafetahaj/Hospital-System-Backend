@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Hospital_System_Management.Models;
 
 namespace Hospital_System_Management.Data
 {
@@ -10,5 +11,6 @@ namespace Hospital_System_Management.Data
         {
 
         }
+        public DbSet<ContactFormModel> ContactForms { get; set; }
     }
 }
