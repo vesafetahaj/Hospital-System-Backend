@@ -274,9 +274,7 @@ D:\Desktop\Hospital LAB1\Hospital System Management\Hospital System Management\o
 D:\Desktop\Hospital LAB1\Hospital System Management\Hospital System Management\obj\Debug\net7.0\staticwebassets.pack.json
 D:\Desktop\Hospital LAB1\Hospital System Management\Hospital System Management\obj\Debug\net7.0\staticwebassets.build.json
 D:\Desktop\Hospital LAB1\Hospital System Management\Hospital System Management\obj\Debug\net7.0\staticwebassets.development.json
-D:\Desktop\Hospital LAB1\Hospital System Management\Hospital System Management\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\Desktop\Hospital LAB1\Hospital System Management\Hospital System Management\obj\Debug\net7.0\scopedcss\bundle\Hospital System Management.styles.css
-D:\Desktop\Hospital LAB1\Hospital System Management\Hospital System Management\obj\Debug\net7.0\scopedcss\projectbundle\Hospital System Management.bundle.scp.css
 D:\Desktop\Hospital LAB1\Hospital System Management\Hospital System Management\obj\Debug\net7.0\Hospital System Management.csproj.CopyComplete
 D:\Desktop\Hospital LAB1\Hospital System Management\Hospital System Management\obj\Debug\net7.0\Hospital System Management.dll
 D:\Desktop\Hospital LAB1\Hospital System Management\Hospital System Management\obj\Debug\net7.0\refint\Hospital System Management.dll
