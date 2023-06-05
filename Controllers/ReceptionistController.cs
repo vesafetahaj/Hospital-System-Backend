@@ -10,5 +10,18 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
+        public IActionResult Rezervimet()
+        {
+            return View();
+        }
+        public IActionResult Dhomat()
+        {
+            return View();
+        }
+        public IActionResult Raportet()
+        {
+            return View();
+        }
     }
 }
+
