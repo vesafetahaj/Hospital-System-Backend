@@ -1,7 +1,157 @@
 ﻿@{
     Layout = "~/Views/Shared/_PatientLayout.cshtml";
 }
+<style>
+    /*container {
+            padding: 16px;
+            border-radius: 30px;
+            background: linear-gradient(120deg, rgb(30,144,255), rgb(176,224,230));
+        }*/ 
+
+        body{
+            background-color:lightblue;
+        }
+
+    h2 {
+        font-size: 36px;
+        font-weight: 200;
+        text-align: center;
+    }
+
+    p {
+        color: black;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 22px;
+        padding: 10px;
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+    }
+
+
+
+    .container {
+        padding: 16px;
+        border-radius: 30px;
+        background: linear-gradient(120deg, rgb(30,144,255), rgb(176,224,230));
+        margin-left: 29%;
+        margin-bottom: 5%;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3 );
+        width: 50%;
+        max-width: 50%;
+        overflow: hidden;
+    }
+
+
+
+    .form-control {
+        margin-bottom: 6px;
+        padding-bottom: 4px;
+        position: relative;
+    }
+
+        .form-control label {
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .form-control input {
+            border: 2px solid lightblue;
+            border-radius: 4px;
+            display: block;
+            font-size: 20px;
+            padding: 10px;
+            width: 100%;
+        }
+
+    #Sherbimi {
+        border: 2px solid #91D8E4;
+        border-radius: 4px;
+        display: block;
+        font-size: 20px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    #Mjeku {
+        border: 2px solid #91D8E4;
+        border-radius: 4px;
+        display: block;
+        font-size: 20px;
+        padding: 10px;
+        width: 100%;
+    }
+</style>
 
 <div id="main">
-    <h1>Rezervimi!</h1>
+    <div class="container">
+  <div class="header">
+    <h2>Rezervimi i Termineve</h2>
+    <p><b>Ju lutem plotësoni të dhënat e kërkuara për Rezervimin e Termineve!</b></p><br>
+  </div>
+
+    <div class="form-control">
+      <label><b>Numri Personal:</b></label>
+      <input type="number"  id="numri" name="numripersonal">
+     </div>
+   <div class="form-control">
+    <label><b>Emri:</b></label>
+    <input type="text"  id="emri" name ="emri">
+   </div>
+
+   <div class="form-control">
+    <label><b>Mbiemri:</b></label>
+    <input type="text"  id="Mbiemri" name="mbiemri">
+   </div>
+
+   <div class="form-control">
+    <label><b>Emaili:</b></label>
+    <input type="email"   id="email" name= "emaili" required>
+   </div>
+
+   <div class="form-control">
+    <label ><b>Ju lutem, zgjedhni Shërbimin Mjekësor!</b></label>
+        </div>
+        <select id="Sherbimi" name="sherbimi">
+          <option value="Zg">Zgjedh:</option>
+          <option value="An">Anesteziologji</option>
+          <option value="Ka">Kardiokirurgji</option>
+          <option value="Kd">Kardiologji</option>
+          <option value="En">Endokrinologji</option>
+          <option value="Op">Optomotologji</option>
+          <option value="St">Stomatologji</option>
+          <option value="Kp">Kirurgji Plastike</option>
+          <option value="Op">Ortopedi</option>
+          <option value="Re">Reumatologji</option>
+         </select>
+         <br>
+
+          <div class="form-control">
+              <label ><b>Ju lutem, zgjedhni Mjekun që dëshironi!</b></label>
+                  </div>
+                  <select id="Mjeku" name="Mjeku">
+                      <option value="An">Zgjedh:</option>
+                    <option value="LC">Lindita Çipi</option>
+                    <option value="GM">Gertiana Mullalli</option>
+                    <option value="AS">Ana Sula</option>
+                    <option value="EP">Elton Petaj</option>
+                    <option value="DS">Dritan Subashi</option>
+                    <option value="KV">Kadri Venkatesh</option>
+                    <option value="LX">Luan Xhelilaj</option>
+                    <option value="FT">Fjorda Tuka</option>
+                    <option value="EM">Esmeralda Sera</option>
+        </select>
+        <br>
+
+        <div class="form-control">
+          <label for="Date "><b>Ju lutem, zgjedhni Daten!</b><br>
+            <input type="date" name="date"><br>
+        </label>
+    </div>
+
+    <input type="submit" value ="login" name= "loginBtn"> 
+
+   </div>
+  
+</div>
 </div>
