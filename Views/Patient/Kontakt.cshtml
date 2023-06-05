@@ -1,0 +1,255 @@
+﻿@{
+    Layout = "~/Views/Shared/_PatientLayout.cshtml";
+}
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: rgb(176,224,230);
+    }
+
+    body, input, textarea, a {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    #section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .box {
+        position: relative;
+        display: table;
+        width: 1100px;
+        margin: auto;
+        margin-top: 35px;
+        border-radius: 30px;
+    }
+
+    .info {
+        width: 35%;
+        height: 551px;
+        padding: 40px;
+        float: left;
+        display: block;
+        border-radius: 30px 0px 0px 30px;
+        background: linear-gradient(120deg, rgb(30,144,255), rgb(176,224,230));
+        color: #fff;
+    }
+
+    .info-title {
+        text-align: left;
+        font-size: 25px;
+        letter-spacing: 0.5px;
+    }
+
+    .info-sub-title {
+        font-size: 18px;
+        font-weight: 300;
+        margin-top: 17px;
+        letter-spacing: 0.5px;
+        line-height: 26px;
+    }
+
+    .info-details {
+        list-style: none;
+        margin: 60px 0;
+    }
+
+        .info-details li {
+            margin-top: 25px;
+            font-size: 18px;
+            color: #fff;
+        }
+
+            .info-details li i {
+                background: #B60112;
+                padding: 12px;
+                border-radius: 50%;
+                margin-right: 5px;
+            }
+
+            .info-details li a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+                .info-details li a:hover {
+                    color: #61010b;
+                }
+
+    .social {
+        list-style: none;
+        text-align: center;
+        margin: 20px 0px;
+    }
+
+        .social li {
+            display: inline-block;
+        }
+
+            .social li i {
+                background: #B60112;
+                color: #fff;
+                padding: 15px;
+                font-size: 20px;
+                border-radius: 22%;
+                margin: 0px 5px;
+                cursor: pointer;
+                transition: all .5s;
+            }
+
+                .social li i:hover {
+                    background: #fff;
+                    color: #000;
+                }
+
+    .form {
+        width: 65%;
+        float: right;
+        padding: 40px 25px 35px 25px;
+        border-radius: 0px 30px 30px 0px;
+        background: #ecf0f3;
+    }
+
+    .form-title {
+        text-align: left;
+        margin-left: 23px;
+        font-size: 28px;
+        letter-spacing: 0.5px;
+    }
+
+    .form-fields {
+        display: table;
+        width: 100%;
+        padding: 15px 5px 5px 5px;
+    }
+
+        .form-fields input,
+        .form-fields textarea {
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 18px;
+            color: #555;
+            padding: 20px 10px 20px 5px;
+            width: 100%;
+        }
+
+        .form-fields textarea {
+            height: 150px;
+            resize: none;
+        }
+
+    .form-group {
+        width: 46%;
+        float: left;
+        padding: 0px 30px;
+        margin: 14px 2px;
+        border-radius: 25px;
+        box-shadow: inset 8px 8px 8px #ecf0f3, inset -8px -8px 8px #ffff;
+    }
+
+    .form-fields .form-group:last-child {
+        width: 96%;
+    }
+
+    .submit-button {
+        width: 96%;
+        height: 60px;
+        margin: 0px 12px;
+        border-radius: 30px;
+        font-size: 20px;
+        font-weight: 700;
+        outline: none;
+        cursor: pointer;
+        color: #fff;
+        text-align: center;
+        background: #B60112;
+        box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffff;
+        transition: .5s;
+    }
+
+        .submit-button:hover {
+            background: #61010b;
+        }
+        </style>
+<div id="main">
+    <section id="section">
+        <div class="box">
+            <div class="info">
+                <h2 class="info-title">Contact Information</h2>
+                <h3 class="info-sub-title">
+                    Fill up the form and
+                    our team will get back to you...
+                </h3>
+                <ul class="info-details">
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>Phone:</span> <a href="tel: +38348721865">048721865</a>
+                    </li>
+                    <br>
+                    <li>
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Email:</span> <a href="mailto: info@gmail.com">em_info@gmail.com</a>
+                    </li>
+                    <br>
+                    <li>
+                        <i class="fas fa-globe"></i>
+                        <span>Website:</span> <a href="https: //yoursite.com">e.m@gmail.com</a>
+                    </li>
+                </ul>
+                <ul class="social">
+                    <li>
+                        <a href="home.php">
+                            <i class="fas fa-home"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/?lang=en">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="form">
+                <form action="#" method="" onsubmit="" name="mesazhi">
+                    <h2 class="form-title">Send us a message</h2>
+                    <div class="form-fields">
+                        <div class="form-group">
+                            <input type="text" class="fname" placeholder="First Name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="lname" placeholder="Last Name" name="surname">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="email" placeholder="Email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="phone" placeholder="Phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="" placeholder="Write your message"></textarea>
+                        </div>
+                    </div>
+                    <input type="submit" value="Send message" class="submit-button" name="save">
+                </form>
+            </div>
+        </div>
+    </section>
+</div>

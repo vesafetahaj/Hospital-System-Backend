@@ -1,37 +1,7 @@
 ﻿@{
-    ViewData["Title"] = "Patient Dashboard";
-    Layout = null;
+    Layout = "~/Views/Shared/_PatientLayout.cshtml";
 }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Hospital_System_Management.styles.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
-                    <partial name="_LoginPartial" />
-                </div>
-            </div>
-        </nav>
 
-    </header>
-    <main>
-        <div class="text-center">
-            <h1 class="display-4">Welcome Patient</h1>
-        </div>
-    </main>
-
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
-</body>
-</html>
+<div id="main">
+    <h1>Welcome to your dashboard!</h1>
+</div>
