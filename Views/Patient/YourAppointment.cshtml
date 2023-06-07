@@ -4,6 +4,127 @@
     Layout = "~/Views/Shared/_PatientLayout.cshtml";
 }
 
-<div id="main">
-    <h1>Your Appointments!</h1>
+<style>
+    * {
+        margin: 0 auto;
+        padding: 0;
+        background-color: #F08080;
+    }
+
+    header h3 {
+        font-size: 30px;
+        color: crimson;
+        font-family: Lucida Handwriting;
+        margin-top: 30px;
+    }
+
+    hr {
+        width: 99%;
+        height: 3px;
+        background: crimson;
+        margin: 0 auto;
+    }
+
+    header,
+    table {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 100px;
+        margin: a auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p {
+        text-align: center;
+        font-size: 14pt;
+        font-weight: bolder;
+        padding: 5px 0px;
+        color: crimson;
+        font-size: 30px;
+        font-family: Lucida Handwriting;
+    }
+
+    button {
+        background-color: crimson;
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+    }
+
+    #r {
+        margin: 10px;
+    }
+
+    td {
+        width: 180px;
+        padding: 5px;
+    }
+
+    th {
+        background-color: crimson;
+        color: #FFC0CB;
+        padding: 5px;
+        font-size: 14pt;
+    }
+
+
+    #de {
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        padding-right: 5px;
+        width: 100%;
+    }
+
+    #d {
+        background-color: #e71e32;
+        cursor: pointer;
+    }
+
+        #d:hover {
+            background-color: #B60112;
+        }
+
+    #e {
+        background-color: #e4863a;
+        cursor: pointer;
+    }
+
+        #e:hover {
+            background-color: #b15e19;
+        }
+
+</style>
+<header>
+
+    <div id="a1">
+        
+            <h3>Manage orders here </h3>
+            <a href="#"><Button id='r'>Dashboard</Button></a>
+
+            </header>
+    <table>
+        <hr>
+        <p>Orders:</p>
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Doctor</th>
+            <th>Service</th>
+            <th>Date</th>
+            <th>Action</th>
+
+
+        </tr>
+       
+            <td id='de'>
+                <a href="#>"><button id="d">DELETE</button></a>
+                <a href="#"><button id='e'>EDIT</button>
+            </td></a>
+
+        </tr>
+    </table>
 </div>
