@@ -12,6 +12,6 @@ namespace Hospital_System_Management.Data
 
         }
         public DbSet<ContactFormModel> ContactForms { get; set; }
-        public DbSet<MakeReservationModel> MakeReservation { get; set; }
+        public DbSet<DoctorModel> Doctor { get; set; }
     }
 }
