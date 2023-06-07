@@ -18,6 +18,7 @@
                     <th>Email</th>
                     <th>Phone</th>
                     <th>Message</th>
+                    <th>Date submitted</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -30,6 +31,7 @@
                         <td>@submission.Email</td>
                         <td>@submission.Phone</td>
                         <td>@submission.Message</td>
+                        <td>@submission.DateSubmitted</td>
                         <td>
                             <a href="@Url.Action("EditContact", "Admin", new { id = submission.Id })" class="btn btn-primary btn-sm">Edit</a>
                             <a href="@Url.Action("DeleteContact", "Admin", new { id = submission.Id })" class="btn btn-danger btn-sm">Delete</a>

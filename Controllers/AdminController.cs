@@ -19,10 +19,15 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
-
-        public IActionResult Doctors()
+        public IActionResult CreateDoctor()
         {
             return View();
+        }
+
+        public ActionResult Doctors()
+        {
+            var doctors = _context.Doctor.ToList();
+            return View(doctors);
         }
         public IActionResult Patients()
         {
@@ -99,8 +104,73 @@ namespace Hospital_System_Management.Controllers
             _context.SaveChanges();
             return RedirectToAction("Contact");
         }
+        
+        [HttpGet]
+        public IActionResult EditDoctor(int id)
+        {
+            var doctor = _context.Doctor.FirstOrDefault(d => d.Id == id);
+            if (doctor == null)
+            {
+                return NotFound();
+            }
+
+            return View(doctor);
+        }
+
+        [HttpPost]
+        public IActionResult EditDoctor(DoctorModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var doctor = _context.Doctor.FirstOrDefault(d => d.Id == model.Id);
+                if (doctor == null)
+                {
+                    return NotFound();
+                }
+
+                doctor.Name = model.Name;
+                doctor.Specialization = model.Specialization;
+                doctor.Email = model.Email;
+                doctor.PhoneNumber = model.PhoneNumber;
+                doctor.Address = model.Address;
+                doctor.PhotoUrl = model.PhotoUrl;
+
+                _context.SaveChanges();
+                return RedirectToAction("Doctors");
+            }
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult DeleteDoctor(int id)
+        {
+            var doctor = _context.Doctor.FirstOrDefault(c => c.Id == id);
+            if (doctor == null)
+            {
+                return NotFound();
+            }
+
+            return View(doctor);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteConfirmedDoctor(int id)
+        {
+            var doctor = _context.Doctor.FirstOrDefault(d => d.Id == id);
+            if (doctor == null)
+            {
+                return NotFound();
+            }
+
+            _context.Doctor.Remove(doctor);
+            _context.SaveChanges();
+            return RedirectToAction("Doctors");
+        }
 
     }
 
-
 }
+
+
+
