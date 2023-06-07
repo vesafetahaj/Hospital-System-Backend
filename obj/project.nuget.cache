@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A5XhQtUByM//4cCoY36dSfSJG+MJRLTEPLdJNzxq4D2phH041TYVMPm+Mpyu9bD83LF2wGgvTWWQ9R4m4mvodg==",
+  "dgSpecHash": "0pKIdPg+Yr8BbAhIJ9bfBTutOQ7E0LXZVvrD80RaRans0bjhiZsKivKA8r80zb+QEbAkVd1GeEaKhHi2ubVglw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\hospital2\\Hospital-System-Backend\\Hospital System Management.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\ProjektiSpitali\\Hospital-System-Backend\\Hospital System Management.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

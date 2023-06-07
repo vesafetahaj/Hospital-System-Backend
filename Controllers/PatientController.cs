@@ -24,5 +24,10 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
+
+        public IActionResult YourAppointment()
+        {
+            return View();
+        }
     }
 }
