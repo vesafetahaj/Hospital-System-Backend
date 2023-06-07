@@ -1,0 +1,29 @@
+﻿@model Hospital_System_Management.Models.ContactFormModel
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div id="main">
+    <h1>Delete Contact Form Submission</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form method="post" action="@Url.Action("DeleteConfirmed", "Admin")">
+                    <div class="alert alert-danger">
+                        <p>Are you sure you want to delete the contact form submission with the following details?</p>
+                        <ul>
+                            <li><strong>First Name:</strong> @Model.FirstName</li>
+                            <li><strong>Last Name:</strong> @Model.LastName</li>
+                            <li><strong>Email:</strong> @Model.Email</li>
+                            <li><strong>Phone:</strong> @Model.Phone</li>
+                            <li><strong>Message:</strong> @Model.Message</li>
+                        </ul>
+                    </div>
+                    <input type="hidden" name="id" value="@Model.Id" />
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <a href="@Url.Action("Contact", "Admin")" class="btn btn-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
