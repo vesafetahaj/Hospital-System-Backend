@@ -1,6 +1,8 @@
 ﻿@{
     Layout = "~/Views/Shared/_PatientLayout.cshtml";
 }
+@using Hospital_System_Management.Models;
+@model ContactFormModel;
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 <style>
 
@@ -58,7 +60,7 @@
     }
 
     .info-details {
-        margin-top:20px;
+        margin-top: 20px;
         list-style: none;
         margin: 60px 0;
     }
@@ -89,7 +91,6 @@
         list-style: none;
         text-align: center;
         margin: 20px 0px;
-       
     }
 
         .social li {
@@ -209,7 +210,7 @@
                 </ul>
                 <ul class="social">
                     <li>
-                        <a href="home.php">
+                        <a href="#">
                             <i class="fas fa-home"></i>
                         </a>
                     </li>
@@ -231,23 +232,23 @@
                 </ul>
             </div>
             <div class="form">
-                <form action="#" method="" onsubmit="" name="mesazhi">
-                    <h2 class="form-title">Send us a message</h2>
+                <form action="@Url.Action("Create", "Contact")" method="post" name="mesazhi">
+                    <!-- ... -->
                     <div class="form-fields">
                         <div class="form-group">
-                            <input type="text" class="fname" placeholder="First Name" name="name">
+                            @Html.TextBoxFor(model => model.FirstName, new { @class = "fname", placeholder = "First Name" })
                         </div>
                         <div class="form-group">
-                            <input type="text" class="lname" placeholder="Last Name" name="surname">
+                            @Html.TextBoxFor(model => model.LastName, new { @class = "lname", placeholder = "Last Name" })
                         </div>
                         <div class="form-group">
-                            <input type="text" class="email" placeholder="Email" name="email">
+                            @Html.TextBoxFor(model => model.Email, new { @class = "email", placeholder = "Email" })
                         </div>
                         <div class="form-group">
-                            <input type="text" class="phone" placeholder="Phone" name="phone">
+                            @Html.TextBoxFor(model => model.Phone, new { @class = "phone", placeholder = "Phone" })
                         </div>
                         <div class="form-group">
-                            <textarea name="message" id="" placeholder="Write your message"></textarea>
+                            @Html.TextAreaFor(model => model.Message, new { placeholder = "Write your message" })
                         </div>
                     </div>
                     <input type="submit" value="Send message" class="submit-button" name="save">
