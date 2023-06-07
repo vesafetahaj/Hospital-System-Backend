@@ -1,0 +1,29 @@
+﻿@model Hospital_System_Management.Models.MakeReservationModel
+@{
+    Layout = "~/Views/Shared/_$ReceptionistLayout.cshtml";
+}
+< div id = "main" >
+    < h1 > Delete appointment </h1>
+
+    <div class= "container" >
+        < div class= "row" >
+            < div class= "col-md-6" >
+                < form method = "post" action = "@Url.Action("DeleteConfirm", "receptionist")">
+                    <div class= "alert alert-danger" >
+                        < p > Are you sure you want to delete the appointment with the following details?</p>
+                        <ul>
+                            <li><strong>Name:</ strong > @Model.Name </ li >
+                            < li >< strong > Surname:</ strong > @Model.Surname</ li >
+                            < li >< strong > Age:</ strong > @Model.Age </ li >
+                            < li >< strong > ID Card:</ strong > @Model.IDCard </ li >
+                        </ ul >
+                    </ div >
+                    < input type = "hidden" name = "id" value = "@Model.Id" />
+                    < button type = "submit" class= "btn btn-danger" > Delete </ button >
+                    < a href = "@Url.Action("Reserve", "receptionist")" class= "btn btn-secondary" > Cancel </ a >
+                </ form >
+            </ div >
+        </ div >
+    </ div >
+</ div >
+</div>
