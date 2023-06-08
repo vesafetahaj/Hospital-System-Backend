@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -9,10 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Views\Admin\images\**" />
-    <Content Remove="Views\Admin\images\**" />
-    <EmbeddedResource Remove="Views\Admin\images\**" />
-    <None Remove="Views\Admin\images\**" />
+    <None Remove="doctor-pic1.jpg" />
   </ItemGroup>
 
   <ItemGroup>

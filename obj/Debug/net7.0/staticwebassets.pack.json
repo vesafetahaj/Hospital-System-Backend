@@ -9,12 +9,20 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\afrim-nimani.jpg",
+      "PackagePath": "staticwebassets\\images\\afrim-nimani.jpg"
+    },
+    {
       "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\appointment.png",
       "PackagePath": "staticwebassets\\images\\appointment.png"
     },
     {
       "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\appointments.jpg",
       "PackagePath": "staticwebassets\\images\\appointments.jpg"
+    },
+    {
+      "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\bujar-vrella.jpg",
+      "PackagePath": "staticwebassets\\images\\bujar-vrella.jpg"
     },
     {
       "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\dashboard-doctor.jpg",
@@ -61,12 +69,20 @@
       "PackagePath": "staticwebassets\\images\\menublue.png"
     },
     {
+      "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\naim-loxha.jpg",
+      "PackagePath": "staticwebassets\\images\\naim-loxha.jpg"
+    },
+    {
       "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\patient.png",
       "PackagePath": "staticwebassets\\images\\patient.png"
     },
     {
       "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\phone.png",
       "PackagePath": "staticwebassets\\images\\phone.png"
+    },
+    {
+      "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\renato-janusic.jpg",
+      "PackagePath": "staticwebassets\\images\\renato-janusic.jpg"
     },
     {
       "Id": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\sunrisecare-hospital-low-resolution-logo-color-on-transparent-background.png",

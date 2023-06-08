@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LPX3mXnizx710316ShyfJvo1wJ+nuE0fDgteEKTb/4g=",
+  "Hash": "jPXzQ6Lg0H6z2sQ7h14ExjVjFGSRa0Qf0p1PK9fnzco=",
   "Source": "Hospital System Management",
   "BasePath": "_content/Hospital System Management",
   "Mode": "Default",
@@ -1071,6 +1071,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\afrim-nimani.jpg",
+      "SourceId": "Hospital System Management",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\",
+      "BasePath": "_content/Hospital System Management",
+      "RelativePath": "images/afrim-nimani.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\afrim-nimani.jpg"
+    },
+    {
       "Identity": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\appointment.png",
       "SourceId": "Hospital System Management",
       "SourceType": "Discovered",
@@ -1103,6 +1120,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\appointments.jpg"
+    },
+    {
+      "Identity": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\bujar-vrella.jpg",
+      "SourceId": "Hospital System Management",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\",
+      "BasePath": "_content/Hospital System Management",
+      "RelativePath": "images/bujar-vrella.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bujar-vrella.jpg"
     },
     {
       "Identity": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\dashboard-doctor.jpg",
@@ -1292,6 +1326,23 @@
       "OriginalItemSpec": "wwwroot\\images\\menublue.png"
     },
     {
+      "Identity": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\naim-loxha.jpg",
+      "SourceId": "Hospital System Management",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\",
+      "BasePath": "_content/Hospital System Management",
+      "RelativePath": "images/naim-loxha.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\naim-loxha.jpg"
+    },
+    {
       "Identity": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\patient.png",
       "SourceId": "Hospital System Management",
       "SourceType": "Discovered",
@@ -1324,6 +1375,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\phone.png"
+    },
+    {
+      "Identity": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\renato-janusic.jpg",
+      "SourceId": "Hospital System Management",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\",
+      "BasePath": "_content/Hospital System Management",
+      "RelativePath": "images/renato-janusic.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\renato-janusic.jpg"
     },
     {
       "Identity": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\wwwroot\\images\\sunrisecare-hospital-low-resolution-logo-color-on-transparent-background.png",
