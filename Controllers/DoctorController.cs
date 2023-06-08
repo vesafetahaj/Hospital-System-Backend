@@ -10,5 +10,21 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
+        public IActionResult Profile()
+        {
+            return View();
+        }
+        public IActionResult Patients()
+        {
+            return View();
+        }
+        public IActionResult Appointments()
+        {
+            return View();
+        }
+        public IActionResult Medications()
+        {
+            return View();
+        }
     }
 }

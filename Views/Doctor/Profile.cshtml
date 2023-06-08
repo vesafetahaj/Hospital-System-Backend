@@ -1,0 +1,205 @@
+@{
+    ViewData["Title"] = "Doctor Dashboard";
+    Layout = "~/Views/Shared/_DoctorLayout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+
+       body{
+            background: #d7dfe4;
+       }
+        #main {
+            transition: margin-left .5s;
+            margin-top: -15px;
+        }
+
+        .wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 900px;
+            display: flex;
+            box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+            margin-top: 4.5rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+            .wrapper .left {
+                width: 35%;
+                background: linear-gradient(to bottom, #9abddc, #c2ced8);
+                padding: 30px 25px;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                text-align: center;
+                color: #fff;
+            }
+
+                .wrapper .left img {
+                    margin-bottom: 10px;
+                    border-radius: 5px;
+                    width: 17rem;
+                    height: 14rem;
+                    margin-top: 37px;
+                }
+
+                .wrapper .left h3 {
+                    margin-bottom: 10px;
+                    margin-top: 25px;
+                }
+            /* .wrapper .left p{
+               font-size: 12px;
+              }*/
+            .wrapper .right {
+                width: 65%;
+                background: #fff;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                padding: 30px 25px;
+            }
+
+                .wrapper .right .info,
+                .wrapper .right .education {
+                    margin-bottom: 25px;
+                }
+
+                    .wrapper .right .info h3,
+                    .wrapper .right .education h3 {
+                        margin-bottom: 15px;
+                        padding-bottom: 5px;
+                        border-bottom: 1px solid #e0e0e0;
+                        color: #353c4e;
+                        text-transform: uppercase;
+                        letter-spacing: 5px;
+                    }
+
+                .wrapper .right .info-data,
+                .wrapper .right .education-data {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                    .wrapper .right .info-data .data,
+                    .wrapper .right .education-data .data {
+                        width: 45%;
+                    }
+
+                        .wrapper .right .info-data .data h4,
+                        .wrapper .right .education-data .data h4 {
+                            color: #353c4e;
+                            margin-bottom: 5px;
+                        }
+
+                    .wrapper .right .info-data p,
+                    .wrapper .right .education-data p {
+                        font-size: 13px;
+                        margin-bottom: 10px;
+                        color: #919aa3;
+                    }
+
+            .wrapper .social-media ul {
+                display: flex;
+            }
+
+                .wrapper .social-media ul a {
+                    width: 45px;
+                    height: 45px;
+                    background: linear-gradient(to bottom, #9abddc, #c2ced8);
+                    margin-right: -128px;
+                    margin-left: 140px;
+                    margin-top: 10px;
+                    border-radius: 5px;
+                    line-height: 45px;
+                    text-align: center;
+                    color: #fff;
+                    display: block;
+                    font-size: 18px;
+                }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="main">
+        <div class="wrapper">
+            <div class="left">
+                <img src="~/images/doctor-pic1.jpg" alt="user" width="100">
+                <h3>Anikka Park</h3>
+
+            </div>
+            <div class="right">
+
+                <div class="info">
+                    <h3>Information</h3>
+                    <div class="info-data">
+                        <div class="data">
+                            <h4>Email</h4>
+                            <p>anikka@gmail.com</p>
+                        </div>
+                        <div class="data">
+                            <h4>Phone</h4>
+                            <p>048-136-109</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education">
+                    <h3>Education</h3>
+                    <div class="education-data">
+                        <div class="data">
+                            <h4>University</h4>
+                            <p>Graduated - University of California, Los Angeles (UCLA)</p>
+                            <p>Medical Doctorate - Vanderbilt University School of Medicine</p>
+                            <p>Specialty training - University of California</p>
+                        </div>
+                        <div class="data">
+                            <h4>Experience</h4>
+                            <p>Psychiatrist, Serenity Mental Health Clinic, Los Angeles, CA</p>
+                            <p>Child and Adolescent Psychiatrist, ABC Children's Hospital</p>
+                            <p>Attending Psychiatrist, XYZ Hospital</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-media">
+                    <ul>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.getElementById("logo").style.transform = "translateX(250px)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("logo").style.transform = "translateX(0)";
+        }
+    </script>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+</body>
+</html>

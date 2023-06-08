@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Doctor Dashboard";
+    Layout = "~/Views/Shared/_DoctorLayout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.getElementById("logo").style.transform = "translateX(250px)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("logo").style.transform = "translateX(0)";
+        }
+    </script>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+</body>
+</html>
