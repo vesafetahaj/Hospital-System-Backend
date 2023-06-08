@@ -8,13 +8,148 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
-       
+       body{
+            background: #d7dfe4;
+       }
+        table, th {
+            padding: 1rem;
+            border-collapse: collapse;
+        }
+
+        table, td {
+            padding: 1rem;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        main.table-patient {
+            width: 68vw;
+            height: 58vh;
+            background-color: rgba(167, 164, 164, 0.333);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 .8rem .8rem #0005;
+            border-radius: .8rem;
+            overflow: hidden;
+            margin-left: 13rem;
+            margin-top:3rem;
+        }
+
+        .table-header-p {
+            width: 100%;
+            height: 13%;
+            background-color: #fff4;
+            padding: .8rem 1rem;
+        }
+        .table-header-p > h2{
+            margin-top: -0.4rem;
+            margin-left: 1.3rem;
+        }
+
+        .table-body-p {
+            width: 95%;
+            max-height: calc(89% - .8rem);
+            background-color: #fffb;
+            margin: .8rem auto;
+            border-radius: .6rem;
+            overflow: auto;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        thead th {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #d5d1defe;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #0000000b;
+        }
+
+        tbody tr:hover {
+            background-color: #fff6;
+        }
+
+        #button {
+            padding: 0.6rem 1.3rem;
+            border: 2px solid #fafafa;
+            font-size: 0.95rem;
+            color: rgb(133, 193, 213);
+            line-height: 1;
+            border-radius: 25px;
+            outline: none;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 0;
+        }
+
+            #button:hover {
+                background-color: transparent;
+                color: #0e7594;
+            }
 
     </style>
 </head>
 <body>
 
-   
+    <main class="table-patient">
+        <section class="table-header-p">
+            <h2>Patients</h2>
+        </section>
+        <section class="table-body-p">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Emri</th>
+                        <th>Mbiemri</th>
+                        <th>Email</th>
+                        <th>Date</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>Noel</td>
+                        <td>Ramaj</td>
+                        <td>noel@gmail.com</td>
+                        <td>06/06/2023</td>
+                        <td><button id="button">Medication</button></td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>Mirlind</td>
+                        <td>Ramaj</td>
+                        <td>mirlind@gmail.com</td>
+                        <td>07/06/2023</td>
+                        <td><button id="button">Medication</button></td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>Niketa</td>
+                        <td>Lutiqi</td>
+                        <td>niketa@gmail.com</td>
+                        <td>10/06/2023</td>
+                        <td><button id="button">Medication</button></td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td>Eneida</td>
+                        <td>Bojaj</td>
+                        <td>eni@gmail.com</td>
+                        <td>12/06/2023</td>
+                        <td><button id="button">Medication</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
 
 
 

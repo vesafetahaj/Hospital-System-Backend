@@ -8,13 +8,113 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
-       
+        body {
+            background: #d7dfe4;
+        }
+        table, th {
+            padding: 1rem;
+            border-collapse: collapse;
+        }
+
+        table, td {
+            padding: 1rem;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        main.table-appointments {
+            width: 68vw;
+            height: 58vh;
+            background-color: rgba(167, 164, 164, 0.333);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 .8rem .8rem #0005;
+            border-radius: .8rem;
+            overflow: hidden;
+            margin-left: 13rem;
+            margin-top: 3rem;
+        }
+
+        .table-header {
+            width: 100%;
+            height: 13%;
+            background-color: #fff4;
+            padding: .8rem 1rem;
+        }
+
+        .table-header > h2 {
+            margin-top: -0.4rem;
+            margin-left: 2rem;
+        }
+
+        .table-body {
+            width: 95%;
+            max-height: calc(89% - .8rem);
+            background-color: #fffb;
+            margin: .8rem auto;
+            border-radius: .6rem;
+            overflow: auto;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        thead th {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #d5d1defe;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #0000000b;
+        }
+
+        tbody tr:hover {
+            background-color: #fff6;
+        }
+
     </style>
 </head>
 
 <body>
 
-    
+    <main class="table-appointments">
+        <section class="table-header">
+            <h2>Appointments</h2>
+        </section>
+        <section class="table-body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>Noel</td>
+                        <td>Ramaj</td>
+                        <td>06/06/2023</td>
+                        <td>15:00</td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>Mirlind</td>
+                        <td>Ramaj</td>
+                        <td>07/06/2023</td>
+                        <td>11:30</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
 
 
     <script>
