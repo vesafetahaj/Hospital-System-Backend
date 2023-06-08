@@ -5,45 +5,38 @@
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+
 <div id="main">
     <h1>Doctors</h1>
-
-    @if (Model.Count > 0)
-    {
-        <table class="table table-hover">
-            <thead style="background-color: #9abddc;">
-                <tr>
-                    <th>Name</th>
-                    <th>Specialization</th>
-                    <th>Email</th>
-                    <th>Phone Number</th>
-                    <th>Address</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody style="background-color: #EAF0FA;">
-                @foreach (var doctor in Model)
-                {
-                    <tr>
-                        <td>@doctor.Name</td>
-                        <td>@doctor.Specialization</td>
-                        <td>@doctor.Email</td>
-                        <td>@doctor.PhoneNumber</td>
-                        <td>@doctor.Address</td>
-                        <td>
-                            <a href="@Url.Action("EditDoctor", "Admin", new { id = doctor.Id })">Edit</a> |
-                            <a href="@Url.Action("DeleteDoctor", "Admin", new { id = doctor.Id })" onclick="return confirm('Are you sure you want to delete this doctor?');">Delete</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-        <div>
-            <a href="@Url.Action("CreateDoctor", "Admin")" class="btn btn-primary">Create New Doctor</a>
-        </div>
-    }
-    else
-    {
-        <p>No doctors found.</p>
-    }
- </div>
+    <div>
+        <a href="@Url.Action("CreateDoctor", "Admin")" class="btn btn-primary">Create New Doctor</a>
+    </div>
+    <div class="row mt-4">
+        @if (Model.Count > 0)
+        {
+            @foreach (var doctor in Model)
+            {
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="@Url.Content(doctor.PhotoUrl)" class="card-img-top" alt="Doctor Image">                        
+                        <div class="card-body">
+                            <h5 class="card-title">@doctor.Name</h5>
+                            <p class="card-text">Specialization: @doctor.Specialization</p>
+                            <p class="card-text">Email: @doctor.Email</p>
+                            <p class="card-text">Phone Number: @doctor.PhoneNumber</p>
+                            <p class="card-text">Address: @doctor.Address</p>
+                            <div class="text-center">
+                                <a href="@Url.Action("EditDoctor", "Admin", new { id = doctor.Id })" class="btn btn-primary">Edit</a>
+                                <a href="@Url.Action("DeleteDoctor", "Admin", new { id = doctor.Id })" class="btn btn-danger">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p>No doctors found.</p>
+        }
+    </div>
+</div>

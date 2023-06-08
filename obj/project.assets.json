@@ -11124,19 +11124,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fursine\\.nuget\\packages\\": {}
+    "C:\\Users\\hp\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fursine\\Desktop\\labkurs1\\Hospital-System-Backend\\Hospital System Management.csproj",
+      "projectUniqueName": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\Hospital System Management.csproj",
       "projectName": "Hospital System Management",
-      "projectPath": "C:\\Users\\fursine\\Desktop\\labkurs1\\Hospital-System-Backend\\Hospital System Management.csproj",
-      "packagesPath": "C:\\Users\\fursine\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fursine\\Desktop\\labkurs1\\Hospital-System-Backend\\obj\\",
+      "projectPath": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\Hospital System Management.csproj",
+      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+      "outputPath": "D:\\Desktop\\Hospital LAB1\\Hospital System Management\\Hospital System Management\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\fursine\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11212,7 +11212,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

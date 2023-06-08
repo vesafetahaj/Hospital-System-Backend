@@ -19,16 +19,8 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
-        public IActionResult CreateDoctor()
-        {
-            return View();
-        }
-
-        public ActionResult Doctors()
-        {
-            var doctors = _context.Doctor.ToList();
-            return View(doctors);
-        }
+        
+       
         public IActionResult Patients()
         {
             return View();
@@ -37,7 +29,7 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
-        // GET: /Admin/Contact
+        // Contact CRUD
         public ActionResult Contact()
         {
             var submissions = _context.ContactForms.ToList();
@@ -104,7 +96,13 @@ namespace Hospital_System_Management.Controllers
             _context.SaveChanges();
             return RedirectToAction("Contact");
         }
-        
+        //Doctors CRUD
+        public ActionResult Doctors()
+        {
+            var doctors = _context.Doctor.ToList();
+            return View(doctors);
+        }
+
         [HttpGet]
         public IActionResult EditDoctor(int id)
         {
@@ -166,6 +164,38 @@ namespace Hospital_System_Management.Controllers
             _context.Doctor.Remove(doctor);
             _context.SaveChanges();
             return RedirectToAction("Doctors");
+        }
+        [HttpPost]
+        public IActionResult CreateDoctor(DoctorModel model)
+        {
+            if (ModelState.IsValid)
+            {
+              
+                var doctor = new DoctorModel
+                {
+                   
+                    Name = model.Name,
+                    Specialization = model.Specialization,
+                    Email = model.Email,
+                    PhoneNumber = model.PhoneNumber,
+                    Address = model.Address,
+                    PhotoUrl = model.PhotoUrl
+                };
+
+               
+                _context.Doctor.Add(doctor);
+                _context.SaveChanges();
+
+                return RedirectToAction("Doctors");
+            }
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult CreateDoctor()
+        {
+            return View();
         }
 
     }
