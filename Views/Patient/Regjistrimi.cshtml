@@ -2,7 +2,7 @@
     Layout = "~/Views/Shared/_PatientLayout.cshtml";
 }
 @using Hospital_System_Management.Models;
-@model ReservationModel;
+@model RegisterModel;
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 <style>
 
@@ -232,7 +232,7 @@
                 </ul>
             </div>
             <div class="form">
-                <form action="@Url.Action("Create", "Patient")" method="post" name="mesazhi">
+                <form action="@Url.Action("Create", "Receptionist")" method="post" name="mesazhi">
                     <!-- aksioni - kontrolleri. -->
                     <div class="form-fields">
                         <div class="form-group">
@@ -242,13 +242,10 @@
                             @Html.TextBoxFor(model => model.Surname, new { @class = "lname", placeholder = "Last Name" })
                         </div>
                         <div class="form-group">
-                            @Html.TextBoxFor(model => model.Mosha, new { @class = "email", placeholder = "Age" })
+                            @Html.TextBoxFor(model => model.Age, new { @class = "email", placeholder = "Age" })
                         </div>
                         <div class="form-group">
                             @Html.TextBoxFor(model => model.IDCard, new { @class = "phone", placeholder = "ID Card" })
-                        </div>
-                        <div class="form-group">
-                            @Html.TextBoxFor(model => model.Sherbimi, new { @class = "phone", placeholder = "Services" })
                         </div>
                         <div class="form-group">
                             @Html.TextBoxFor(model => model.DateSubmitted, new {@type="date", placeholder = "Date Submitted" })

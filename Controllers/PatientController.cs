@@ -22,7 +22,7 @@ namespace Hospital_System_Management.Controllers
         }
 
 
-        public IActionResult Rezervimi()
+        public IActionResult Regjistrimi()
         {
             return View();
         }
@@ -35,7 +35,13 @@ namespace Hospital_System_Management.Controllers
             return View();
         }
 
-   
+        public IActionResult Rezervimi()
+        {
+            return View();
+        }
+
+
+
         // Reservation CRUD
         public ActionResult YourAppointment()
         {

@@ -1,14 +1,14 @@
-﻿@model Hospital_System_Management.Models.RegisterModel
+﻿@model Hospital_System_Management.Models.ReservationModel
 @{
-    Layout = "~/Views/Shared/_ReceptionistLayout.cshtml";
+    Layout = "~/Views/Shared/_PatientLayout.cshtml";
 }
 <div id="main"> 
 
     <div class="container">
         <div class="row">
-            <h1>Edit Contact Form Submission</h1>
+            <h1>Change your Appointment</h1>
             <div class="col-md-6">
-                <form method="post" action="@Url.Action("EditRegistration", "Receptionist")">
+                <form method="post" action="@Url.Action("EditReservation", "Patient")">
                     <input type="hidden" name="Id" value="@Model.Id" />
                     <div class="form-group">
                         <label for="Name">First Name</label>
@@ -20,15 +20,19 @@
                     </div>
                     <div class="form-group">
                         <label for="email">Age</label>
-                        <input type="email" class="form-control" id="email" name="Email" value="@Model.Age" />
+                        <input type="number" class="form-control" id="email" name="Email" value="@Model.Mosha" />
                     </div>
                     <div class="form-group">
                         <label for="phone">Id Card</label>
-                        <input type="tel" class="form-control" id="phone" name="Phone" value="@Model.IDCard" />
+                        <input type="text" class="form-control" id="phone" name="Phone" value="@Model.IDCard" />
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Services</label>
+                        <input type="text" class="form-control" id="sherbimi" name="Card" value="@Model.Sherbimi" />
                     </div>
                     <div class="form-group">
                         <label for="phone">Date</label>
-                        <input type="tel" class="form-control" id="phone" name="Phone" value="@Model.DateSubmitted" />
+                        <input type="datetime" class="form-control" id="data" name="Date" value="@Model.DateSubmitted" />
                     </div>
                     
 
