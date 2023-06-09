@@ -3,10 +3,11 @@ using Hospital_System_Management.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace Hospital_System_Management.Controllers
 {
-    [Authorize(Roles = "receptionist")]
+    [Authorize(Roles = "receptionist, Patient")]
     public class ReceptionistController : Controller
     {
         private readonly ApplicationDbContext _context;
