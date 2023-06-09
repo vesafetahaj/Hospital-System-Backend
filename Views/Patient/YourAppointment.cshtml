@@ -3,82 +3,48 @@
 @{
     Layout = "~/Views/Shared/_PatientLayout.cshtml";
 }
+@model List<ReservationModel>
 
-<style>
+<div id="main">
+    <h1>Your Appointment </h1>
+    <br />
 
+    @if (Model.Count > 0)
+    {
+        <table class="table table-hover">
+            <thead style="background-color: #9abddc;">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>ID Card</th>
+                    <th>Services</th>
+                    <th>Date submitted</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody style="background-color: #EAF0FA;">
+                @foreach (var submission in Model)
+                {
+                    <tr>
+                        <td>@submission.Name</td>
+                        <td>@submission.Surname</td>
+                        <td>@submission.Mosha</td>
+                        <td>@submission.IDCard</td>
+                        <td>@submission.Sherbimi</td>
+                        <td>@submission.DateSubmitted</td>
+                        <td>
+                            <a href="@Url.Action("EditReservation", "Patient", new { id = submission.Id })" class="btn btn-primary btn-sm">Edit</a>
+                            <a href="@Url.Action("DeleteReservation", "Patient", new { id = submission.Id })" class="btn btn-danger btn-sm">Delete</a>
 
-    .container h1{
-        text-align:center;
-        font-family: Arial, sans-serif;
-        color:lightblue;
-        font-size:34px;
-        margin-bottom:10px;
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     }
-    table {
-        width: 100%;
-        border-collapse: collapse;
+    else
+    {
+        <p>No appointments  found.</p>
     }
-
-    th, td {
-        padding: 8px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
-
-    th {
-        background-color: #f2f2f2;
-    }
-
-    .actions {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .edit-btn,
-    .delete-btn {
-        padding: 6px 12px;
-        margin-right: 5px;
-        background-color: dodgerblue;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    .delete-btn {
-        background-color: #f44336;
-    }
-</style>
-<div class="container">
-    <h1>Appointment Dashboard</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Doctor</th>
-                <th>Service</th>
-                <th>Date</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>johndoe@example.com</td>
-                <td>Dr. Smith</td>
-                <td>Stomatology</td>
-                <td>2023-06-10</td>
-                <td class="actions">
-                    <button class="edit-btn">Edit</button>
-                    <button class="delete-btn">Delete</button>
-                </td>
-            </tr>
-      
-           
-        </tbody>
-    </table>
 </div>
