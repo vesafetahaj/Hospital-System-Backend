@@ -231,9 +231,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="form">
-                <form action="@Url.Action("Create", "Register")" method="post" name="mesazhi">
-                    <!-- ... -->
+            <div class="form">    
+                <form action="@Url.Action("Create", "Receptionist")" method="post" name="mesazhi">
+                    <!-- aksioni - kontrolleri. -->
                     <div class="form-fields">
                         <div class="form-group">
                             @Html.TextBoxFor(model => model.Name, new { @class = "fname", placeholder = "First Name" })

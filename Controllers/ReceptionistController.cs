@@ -113,7 +113,7 @@ namespace Hospital_System_Management.Controllers
                 model.DateSubmitted = DateTime.Now;
                 _context.MakeReservation.Add(model);
                 _context.SaveChanges();
-                return RedirectToAction("CreateSuccess");
+                return RedirectToAction("CreateSuccessR");
             }
 
             return View(model);
