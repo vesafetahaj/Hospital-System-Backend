@@ -1,14 +1,14 @@
-﻿@model Hospital_System_Management.Models.MakeReservationModel
+﻿@model Hospital_System_Management.Models.RegisterModel
 @{
     Layout = "~/Views/Shared/_ReceptionistLayout.cshtml";
 }
 < div id = "main" >
-    < h1 > Edit Appointment</h1>
+    < h1 > Edit Registration</h1>
 
     <div class= "container" >
         < div class= "row" >
             < div class= "col-md-6" >
-                < form method = "post" action = "@Url.Action("EditReservation", "reservation")">
+                < form method = "post" action = "@Url.Action("EditRegistration", "receptionist")">
                     <input type="hidden" name="Id" value="@Model.Id" />
                     <div class= "form-group" >
                         < label for= "Name" >Name </ label >
@@ -25,6 +25,10 @@
                     < div class= "form-group" >
                         < label for= "IDCard" > ID Card </ label >
                         < input type = "IDCard" class= "form-control" id = "IDCard" name = "IDCard" value = "@Model.IDCard" />
+                    </ div >
+                     < div class= "form-group" >
+                        < label for= "DateSubmitted" > Date Submitted </ label >
+                        < input type = "DateSubmitted" class= "form-control" id = "DateSubmitted" name = "DateSubmitted" value = "@Model.DateSubmitted" />
                     </ div >
 
                     < button type = "submit" class= "btn btn-primary" > Save </ button >

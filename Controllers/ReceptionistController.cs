@@ -6,132 +6,131 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Hospital_System_Management.Controllers
 {
-    [Authorize(Roles ="receptionist")]
+    [Authorize(Roles = "receptionist")]
     public class ReceptionistController : Controller
     {
-        private readonly ApplicationDbContext _context1;
-        public ReceptionistController(ApplicationDbContext context1)
+        private readonly ApplicationDbContext _context;
+
+        public ReceptionistController(ApplicationDbContext context)
         {
-            _context1 = context1;
+            _context = context;
         }
         public IActionResult Index()
         {
             return View();
         }
-        public IActionResult Rezervimet()
+
+
+        public IActionResult Rooms()
         {
             return View();
         }
-        public IActionResult Dhomat()
+        public IActionResult Reservations()
         {
             return View();
         }
-        public IActionResult Raportet()
+        public IActionResult Raports()
         {
             return View();
         }
-        // GET: /Receptionist/Reservation
-        public ActionResult Reservation()
+        // Contact CRUD
+        public ActionResult Register()
         {
-            var submissions = _context1.MakeReservation.ToList();
+            var submissions = _context.MakeReservation.ToList();
             return View(submissions);
         }
         [HttpGet]
-        public IActionResult EditReservation(int id)
+        public IActionResult EditRegistration(int id)
         {
-            var reservation = _context1.MakeReservation.FirstOrDefault(c => c.Id == id);
-            if (reservation == null)
+            var register = _context.MakeReservation.FirstOrDefault(c => c.Id == id);
+            if (register == null)
             {
                 return NotFound();
             }
 
-            return View(reservation);
+            return View(register);
         }
 
         [HttpPost]
-        public IActionResult EditReservation(MakeReservationModel model)
+        public IActionResult EditRegistration(RegisterModel model)
         {
             if (ModelState.IsValid)
             {
-                var reservation = _context1.MakeReservation.FirstOrDefault(c => c.Id == model.Id);
-                if (reservation == null)
+                var register = _context.MakeReservation.FirstOrDefault(c => c.Id == model.Id);
+                if (register == null)
                 {
                     return NotFound();
                 }
+                register.Name = model.Name;
+                register.Surname = model.Surname;
+                register.Age = model.Age;
+                register.IDCard = model.IDCard;
+                register.DateSubmitted = model.DateSubmitted;
 
-                reservation.Name = model.Name;
-                reservation.Surname= model.Surname;
-                reservation.Age = model.Age;
-                reservation.IDCard = model.IDCard;
-
-                _context1.SaveChanges();
-                return RedirectToAction("Reserve");
+                _context.SaveChanges();
+                return RedirectToAction("Register");
             }
 
             return View(model);
         }
 
         [HttpGet]
-        public IActionResult DeleteReservation(int id)
+        public IActionResult DeleteRegistration(int id)
         {
-            var reservation = _context1.MakeReservation.FirstOrDefault(c => c.Id == id);
-            if (reservation == null)
+            var register = _context.MakeReservation.FirstOrDefault(c => c.Id == id);
+            if (register == null)
             {
                 return NotFound();
             }
 
-            return View(reservation);
+            return View(register);
         }
 
         [HttpPost]
-        public IActionResult DeleteConfirm(int id)
+        public IActionResult DeleteConfirmed(int id)
         {
-            var reservation = _context1.MakeReservation.FirstOrDefault(c => c.Id == id);
-            if (reservation == null)
+            var register = _context.MakeReservation.FirstOrDefault(c => c.Id == id);
+            if (register == null)
             {
                 return NotFound();
             }
 
-            _context1.MakeReservation.Remove(reservation);
-            _context1.SaveChanges();
-            return RedirectToAction("Reserve");
+            _context.MakeReservation.Remove(register);
+            _context.SaveChanges();
+            return RedirectToAction("Register");
         }
-      
-        [HttpPost]
-
-        public IActionResult CreateReservation(MakeReservationModel model)
-        {
-            if (ModelState.IsValid)
-            {
-
-                var reservation = new MakeReservationModel
-                {
-
-                    Name = model.Name,
-                    Surname = model.Surname,
-                    Age = model.Age,
-                    IDCard = model.IDCard,
-                    DateSubmitted = model.DateSubmitted                  
-                };
-
-
-                _context1.MakeReservation.Add(reservation);
-                _context1.SaveChanges();
-
-                return RedirectToAction("Reserve");
-            }
-
-            return View(model);
-        }
-
         [HttpGet]
-        public IActionResult CreateReservation()
+        public IActionResult Create()
         {
             return View();
         }
 
-    }
+        [HttpPost]
+        public IActionResult Create(RegisterModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                model.DateSubmitted = DateTime.Now;
+                _context.MakeReservation.Add(model);
+                _context.SaveChanges();
+                return RedirectToAction("CreateSuccess");
+            }
 
+            return View(model);
+        }
+        [HttpGet]
+        public IActionResult Success()
+        {
+            var register = _context.MakeReservation.ToList();
+            return View(register);
+        }
+        [HttpGet]
+
+        public IActionResult CreateSuccessR()
+        {
+            return View();
+        }
+    }  
 
 }
 

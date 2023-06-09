@@ -3,9 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Hospital_System_Management.Models
 {
-    [Table("MakeReservation")]
 
-    public class MakeReservationModel
+    public class RegisterModel
     {
         [Key]
         public int Id { get; set; }
