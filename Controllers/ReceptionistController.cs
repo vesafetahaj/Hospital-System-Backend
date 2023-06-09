@@ -96,6 +96,39 @@ namespace Hospital_System_Management.Controllers
             _context1.SaveChanges();
             return RedirectToAction("Reserve");
         }
+      
+        [HttpPost]
+
+        public IActionResult CreateReservation(MakeReservationModel model)
+        {
+            if (ModelState.IsValid)
+            {
+
+                var reservation = new MakeReservationModel
+                {
+
+                    Name = model.Name,
+                    Surname = model.Surname,
+                    Age = model.Age,
+                    IDCard = model.IDCard,
+                    DateSubmitted = model.DateSubmitted                  
+                };
+
+
+                _context1.MakeReservation.Add(reservation);
+                _context1.SaveChanges();
+
+                return RedirectToAction("Reserve");
+            }
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult CreateReservation()
+        {
+            return View();
+        }
 
     }
 
