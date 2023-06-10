@@ -37,13 +37,13 @@ namespace Hospital_System_Management.Controllers
         // Contact CRUD
         public ActionResult Register()
         {
-            var submissions = _context.MakeReservation.ToList();
+            var submissions = _context.RegisterForm.ToList();
             return View(submissions);
         }
         [HttpGet]
         public IActionResult EditRegistration(int id)
         {
-            var register = _context.MakeReservation.FirstOrDefault(c => c.Id == id);
+            var register = _context.RegisterForm.FirstOrDefault(c => c.Id == id);
             if (register == null)
             {
                 return NotFound();
@@ -57,7 +57,7 @@ namespace Hospital_System_Management.Controllers
         {
             if (ModelState.IsValid)
             {
-                var register = _context.MakeReservation.FirstOrDefault(c => c.Id == model.Id);
+                var register = _context.RegisterForm.FirstOrDefault(c => c.Id == model.Id);
                 if (register == null)
                 {
                     return NotFound();
@@ -65,8 +65,9 @@ namespace Hospital_System_Management.Controllers
                 register.Name = model.Name;
                 register.Surname = model.Surname;
                 register.Age = model.Age;
-                register.IDCard = model.IDCard;
+                register.BirthPlace = model.BirthPlace;
                 register.DateSubmitted = model.DateSubmitted;
+                register.IDCard = model.IDCard;
 
                 _context.SaveChanges();
                 return RedirectToAction("Register");
@@ -78,7 +79,7 @@ namespace Hospital_System_Management.Controllers
         [HttpGet]
         public IActionResult DeleteRegistration(int id)
         {
-            var register = _context.MakeReservation.FirstOrDefault(c => c.Id == id);
+            var register = _context.RegisterForm.FirstOrDefault(c => c.Id == id);
             if (register == null)
             {
                 return NotFound();
@@ -90,13 +91,13 @@ namespace Hospital_System_Management.Controllers
         [HttpPost]
         public IActionResult DeleteConfirmed(int id)
         {
-            var register = _context.MakeReservation.FirstOrDefault(c => c.Id == id);
+            var register = _context.RegisterForm.FirstOrDefault(c => c.Id == id);
             if (register == null)
             {
                 return NotFound();
             }
 
-            _context.MakeReservation.Remove(register);
+            _context.RegisterForm.Remove(register);
             _context.SaveChanges();
             return RedirectToAction("Register");
         }
@@ -112,7 +113,7 @@ namespace Hospital_System_Management.Controllers
             if (ModelState.IsValid)
             {
                 model.DateSubmitted = DateTime.Now;
-                _context.MakeReservation.Add(model);
+                _context.RegisterForm.Add(model);
                 _context.SaveChanges();
                 return RedirectToAction("CreateSuccessR");
             }
@@ -122,7 +123,7 @@ namespace Hospital_System_Management.Controllers
         [HttpGet]
         public IActionResult Success()
         {
-            var register = _context.MakeReservation.ToList();
+            var register = _context.RegisterForm.ToList();
             return View(register);
         }
         [HttpGet]

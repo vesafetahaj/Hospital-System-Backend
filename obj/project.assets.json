@@ -11130,11 +11130,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\SunriseCare\\Hospital-System-Backend\\Hospital System Management.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\hospital5\\Hospital-System-Backend\\Hospital System Management.csproj",
       "projectName": "Hospital System Management",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\SunriseCare\\Hospital-System-Backend\\Hospital System Management.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\hospital5\\Hospital-System-Backend\\Hospital System Management.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\SunriseCare\\Hospital-System-Backend\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\hospital5\\Hospital-System-Backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

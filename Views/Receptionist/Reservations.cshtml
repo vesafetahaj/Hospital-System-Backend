@@ -245,13 +245,16 @@
                             @Html.TextBoxFor(model => model.Age, new { @class = "email", placeholder = "Age" })
                         </div>
                         <div class="form-group">
-                            @Html.TextBoxFor(model => model.IDCard, new { @class = "phone", placeholder = "ID Card" })
+                            @Html.TextBoxFor(model => model.BirthPlace, new {@type="text", placeholder = "Place of birth" })
                         </div>
                         <div class="form-group">
-                            @Html.TextBoxFor(model => model.DateSubmitted, new {@type="date", placeholder = "Date Submitted" })
+                            @Html.TextBoxFor(model => model.DateSubmitted, new {@type="date", placeholder = "Date of birth" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.IDCard, new { @class = "number", placeholder = "ID Card" })
                         </div>
                     </div>
-                    <input type="submit" value="Send message" class="submit-button" name="save">
+                    <input type="submit" value="Register" class="submit-button" name="save">
                 </form>
             </div>
         </div>
