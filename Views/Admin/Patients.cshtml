@@ -1,8 +1,45 @@
 ﻿@{
-
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+@using Hospital_System_Management.Models
+@model List<RegisterModel>
+
+<style>
+    .table-blue {
+        background-color: #eaf4fd;
+    }
+
+    .thead-dark {
+        background-color: #343a40;
+        color: #fff;
+    }
+</style>
 
 <div id="main">
     <h1>Patients</h1>
+    <table class="table table-bordered table-striped table-hover table-blue">
+        <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Age</th>
+                <th>Birth Place</th>
+                <th>Date</th>
+                <th>ID Card</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var patient in Model)
+            {
+                <tr>
+                    <td>@patient.Name</td>
+                    <td>@patient.Surname</td>
+                    <td>@patient.Age</td>
+                    <td>@patient.BirthPlace</td>
+                    <td>@patient.DateSubmitted</td>
+                    <td>@patient.IDCard</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>

@@ -20,14 +20,6 @@ namespace Hospital_System_Management.Controllers
             return View();
         }
         
-       
-        public IActionResult Patients()
-        {
-            return View();
-        }
-
-    
-
         // Contact CRUD
         public ActionResult Contact()
         {
@@ -217,9 +209,9 @@ namespace Hospital_System_Management.Controllers
             return View(appointments);
 
         }
-        //Services
-     
 
+        //Services CRUD
+     
         public ActionResult Services()
         {
             var service = _context.Sherbimi.ToList();
@@ -314,8 +306,16 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
-        
-        
+
+        //Patients
+
+        public ActionResult Patients()
+        {
+            var patients = _context.RegisterForm.ToList();
+            return View(patients);
+        }
+
+
 
 
     }

@@ -34,8 +34,8 @@
                         <td>@register.DateSubmitted</td>
                         <td>@register.IDCard</td>
                         <td>
-                            <a href="@Url.Action("EditRegistration", "receptionist", new { id = register.Id })" class="btn btn-primary btn-sm">Edit</a>
-                            <a href="@Url.Action("DeleteRegistration", "receptionist", new { id = register.Id })" class="btn btn-danger btn-sm">Delete</a>
+                            <a href="@Url.Action("EditRegistration", "Receptionist", new { id = register.Id })" class="btn btn-primary btn-sm">Edit</a>
+                            <a href="@Url.Action("DeleteRegistration", "Receptionist", new { id = register.Id })" class="btn btn-danger btn-sm">Delete</a>
 
                         </td>
                     </tr>
@@ -45,6 +45,6 @@
     }
     else
     {
-        <p>No contact form submissions found.</p>
+        <p>No patients found.</p>
     }
 </div>
