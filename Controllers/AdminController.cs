@@ -25,12 +25,7 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
-        public ActionResult Appointments()
-        {
-            var appointments = _context.OnlineReservation.ToList();
-            return View(appointments);
-            
-        }
+       
         // Contact CRUD
         public ActionResult Contact()
         {
@@ -211,6 +206,14 @@ namespace Hospital_System_Management.Controllers
 
             var allDoctors = _context.Doctor.ToList();
             return View("Doctors", allDoctors);
+        }
+
+        //Appointments
+        public ActionResult Appointments()
+        {
+            var appointments = _context.OnlineReservation.ToList();
+            return View(appointments);
+
         }
 
     }
