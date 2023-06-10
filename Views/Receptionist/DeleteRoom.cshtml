@@ -1,0 +1,30 @@
+@model Hospital_System_Management.Models.RoomReservationModel
+@{
+    Layout = "~/Views/Shared/_ReceptionistLayout.cshtml";
+}
+<div id="main">
+    <h1>Delete Room</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form method="post" action="@Url.Action("DeleteConfirmedRoom", "Receptionist")">
+                    <div class="alert alert-danger">
+                        <p>Are you sure you want to delete the doctor with the following details?</p>
+                        <ul>
+                            <li><strong>Room Number:</strong> @Model.RoomNumber</li>
+                            <li><strong>Name:</strong> @Model.Name</li>
+                            <li><strong>Last Name:</strong> @Model.Surname</li>
+                            <li><strong>Birthplace:</strong> @Model.BirthPlace</li>
+                            <li><strong>Date Submitted:</strong> @Model.DateSubmitted</li>
+                            <li><strong>ID Card:</strong> @Model.IDCard</li>
+                        </ul>
+                   </div>
+                    <input type="hidden" name="id" value="@Model.Id" />
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <a href="@Url.Action("Rooms", "Receptionist")" class="btn btn-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

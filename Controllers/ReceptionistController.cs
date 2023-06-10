@@ -21,12 +21,11 @@ namespace Hospital_System_Management.Controllers
             return View();
         }
 
-
-        public IActionResult Rooms()
+        public IActionResult Reservations()
         {
             return View();
         }
-        public IActionResult Reservations()
+        public IActionResult ReserveARoom()
         {
             return View();
         }
@@ -34,7 +33,7 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
-        // Contact CRUD
+        // REGISTER CRUD
         public ActionResult Register()
         {
             var submissions = _context.RegisterForm.ToList();
@@ -132,6 +131,109 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
+
+        // ROOM RESERVATION CRUD
+
+        public ActionResult Rooms()
+        {
+            var room = _context.RoomReservation.ToList();
+            return View(room);
+        }
+
+        [HttpGet]
+        public IActionResult EditRoom(int id)
+        {
+            var room = _context.RoomReservation.FirstOrDefault(d => d.Id == id);
+            if (room == null)
+            {
+                return NotFound();
+            }
+
+            return View(room);
+        }
+
+        [HttpPost]
+        public IActionResult EditRoom(RoomReservationModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var room = _context.RoomReservation.FirstOrDefault(d => d.Id == model.Id);
+                if (room == null)
+                {
+                    return NotFound();
+                }
+                room.RoomNumber = model.RoomNumber;
+                room.Name = model.Name;
+                room.Surname = model.Surname;
+                room.BirthPlace = model.BirthPlace;
+                room.DateSubmitted = model.DateSubmitted;
+                room.IDCard = model.IDCard;
+
+                _context.SaveChanges();
+                return RedirectToAction("Rooms");
+            }
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult DeleteRoom(int id)
+        {
+            var room = _context.RoomReservation.FirstOrDefault(c => c.Id == id);
+            if (room == null)
+            {
+                return NotFound();
+            }
+
+            return View(room);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteConfirmedRoom(int id)
+        {
+            var room = _context.RoomReservation.FirstOrDefault(d => d.Id == id);
+            if (room == null)
+            {
+                return NotFound();
+            }
+
+            _context.RoomReservation.Remove(room);
+            _context.SaveChanges();
+            return RedirectToAction("Rooms");
+        }
+        [HttpPost]
+        public IActionResult CreateRoom(RoomReservationModel model)
+        {
+            if (ModelState.IsValid)
+            {
+
+                var room = new RoomReservationModel
+                {
+                    RoomNumber = model.RoomNumber,
+                    Name = model.Name,
+                    Surname = model.Surname,
+                    BirthPlace = model.BirthPlace,
+                    DateSubmitted = model.DateSubmitted,
+                    IDCard = model.IDCard
+                };
+
+
+
+                _context.RoomReservation.Add(room);
+                _context.SaveChanges();
+
+                return RedirectToAction("Rooms");
+            }
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult CreateRoom()
+        {
+            return View();
+        }
+
     }  
 
 }
