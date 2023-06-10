@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Web;
+
+
 
 namespace Hospital_System_Management.Controllers
 {
@@ -26,6 +29,8 @@ namespace Hospital_System_Management.Controllers
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
+          
+
             return View();
         }
 

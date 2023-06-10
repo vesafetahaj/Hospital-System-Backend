@@ -25,9 +25,11 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
-        public IActionResult Appointments()
+        public ActionResult Appointments()
         {
-            return View();
+            var appointments = _context.OnlineReservation.ToList();
+            return View(appointments);
+            
         }
         // Contact CRUD
         public ActionResult Contact()
