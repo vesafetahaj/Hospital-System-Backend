@@ -109,10 +109,10 @@
 
 /* left box */
 .home-content .sales-boxes .recent-sales{
-    width: 65%;
+    width: 100%;
     background: #fff;
-    padding: 20px 10px;
-    margin: 0 20px;
+            padding: 20px 10px;
+            margin: 0 20px;
     border-radius: 12px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   }
@@ -126,15 +126,13 @@
     font-weight: 500;
     /* margin-bottom: 10px; */
   }
-  .sales-boxes .sales-details li.topic{
+  .sales-boxes .sales-details tr.topic{
     font-size: 20px;
     font-weight: 500;
+
   }
-  .sales-boxes .sales-details li{
-    list-style: none;
-    margin: 8px 0;
-  }
-  .sales-boxes .sales-details li a{
+  
+  .sales-boxes .sales-details td{
     font-size: 18px;
     color: #333;
     font-size: 400;
@@ -195,79 +193,54 @@
     <div class="sales-boxes">
         <div class="recent-sales box">
             <div class="title">Recent Reservations</div>
+            <br />
             <div class="sales-details">
-                <ul class="details">
-                    <li class="topic">Date</li>
-                   
-                    <li><a href="#"></a></li>
-                </ul>
-                <ul class="details">
-                    <li class="topic">Patient</li>
-                    
-                    
-                </ul>
+                    <div id="main">
+                        <br />
 
-                <ul class="details">
-                    <li class="topic">Room</li>
-                  
-                    <li><a href="#"></a></li>
-                  
-                </ul>
-                <ul class="details">
-                        <li class="topic"><a href=""><button id="d">DELETE</button></a></li>
-                 
-                </ul>
-                    <ul class="details">
-                        <li class="topic"><a href=""><button id="d">EDIT</button></a></li>
+                        @if (Model.Count > 0)
+                        {
+                            <table class="table table-hover">
+                                <thead >
+                                    <tr>
+                                        <th>Room Number</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Place of birth</th>
+                                        <th>Date submitted</th>
+                                        <th>ID Card</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var room in Model)
+                                    {
+                                        <tr>
+                                            <td>@room.RoomNumber</td>
+                                            <td>@room.Name</td>
+                                            <td>@room.Surname</td>
+                                            <td>@room.BirthPlace</td>
+                                            <td>@room.DateSubmitted</td>
+                                            <td>@room.IDCard</td>
+                                            <td>
+                                                <a href="@Url.Action("EditRoom", "receptionist", new { id = room.Id })" class="btn btn-primary btn-sm">Edit</a>
+                                                <a href="@Url.Action("DeleteRoom", "receptionist", new { id = room.Id })" class="btn btn-danger btn-sm">Delete</a>
 
-                    </ul>
-
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        }
+                        else
+                        {
+                            <p>No rooms reserved .</p>
+                        }
+                    </div>
             </div>
 
         </div>
         </section>
 
-<div id="main">
-    <h1>Reserved Rooms </h1>
-    <br />
 
-    @if (Model.Count > 0)
-    {
-        <table class="table table-hover">
-            <thead style="background-color: #9abddc;">
-                <tr>
-                    <th>Room Number</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Place of birth</th>
-                    <th>Date submitted</th>
-                    <th>ID Card</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody style="background-color: #EAF0FA;">
-                @foreach (var submission in Model)
-                {
-                    <tr>
-                        <td>@submission.RoomNumber</td>
-                        <td>@submission.Name</td>
-                        <td>@submission.Surname</td>
-                        <td>@submission.BirthPlace</td>
-                        <td>@submission.DateSubmitted</td>
-                        <td>@submission.IDCard</td>
-                        <td>
-                            <a href="@Url.Action("EditRoom", "receptionist", new { id = submission.Id })" class="btn btn-primary btn-sm">Edit</a>
-                            <a href="@Url.Action("DeleteRoom", "receptionist", new { id = submission.Id })" class="btn btn-danger btn-sm">Delete</a>
-
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    }
-    else
-    {
-        <p>No contact form submissions found.</p>
-    }
-</div>
 

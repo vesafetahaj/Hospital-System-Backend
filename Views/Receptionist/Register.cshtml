@@ -24,18 +24,18 @@
                 </tr>
             </thead>
             <tbody style="background-color: #EAF0FA;">
-                @foreach (var submission in Model)
+                @foreach (var register in Model)
                 {
                     <tr>
-                        <td>@submission.Name</td>
-                        <td>@submission.Surname</td>
-                        <td>@submission.Age</td>
-                        <td>@submission.BirthPlace</td>
-                        <td>@submission.DateSubmitted</td>
-                        <td>@submission.IDCard</td>
+                        <td>@register.Name</td>
+                        <td>@register.Surname</td>
+                        <td>@register.Age</td>
+                        <td>@register.BirthPlace</td>
+                        <td>@register.DateSubmitted</td>
+                        <td>@register.IDCard</td>
                         <td>
-                            <a href="@Url.Action("EditRegistration", "receptionist", new { id = submission.Id })" class="btn btn-primary btn-sm">Edit</a>
-                            <a href="@Url.Action("DeleteRegistration", "receptionist", new { id = submission.Id })" class="btn btn-danger btn-sm">Delete</a>
+                            <a href="@Url.Action("EditRegistration", "receptionist", new { id = register.Id })" class="btn btn-primary btn-sm">Edit</a>
+                            <a href="@Url.Action("DeleteRegistration", "receptionist", new { id = register.Id })" class="btn btn-danger btn-sm">Delete</a>
 
                         </td>
                     </tr>
