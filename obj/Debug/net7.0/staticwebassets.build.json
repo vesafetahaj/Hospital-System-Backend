@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nSbfynAmg1VQQuWS/DxsnjvbVV25l1rBKJ3Ns9/8e0A=",
+  "Hash": "tZPBgS/A7zyW/4UCb5BSQ61UFnfNRLLlswJsMmVmlv4=",
   "Source": "Hospital System Management",
   "BasePath": "_content/Hospital System Management",
   "Mode": "Default",
@@ -1377,6 +1377,23 @@
       "OriginalItemSpec": "wwwroot\\images\\phone.png"
     },
     {
+      "Identity": "C:\\Users\\Admin\\Desktop\\SunriseCare\\Hospital-System-Backend\\wwwroot\\images\\regjistrimi.png",
+      "SourceId": "Hospital System Management",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\SunriseCare\\Hospital-System-Backend\\wwwroot\\",
+      "BasePath": "_content/Hospital System Management",
+      "RelativePath": "images/regjistrimi.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\regjistrimi.png"
+    },
+    {
       "Identity": "C:\\Users\\Admin\\Desktop\\SunriseCare\\Hospital-System-Backend\\wwwroot\\images\\renato-janusic.jpg",
       "SourceId": "Hospital System Management",
       "SourceType": "Discovered",
@@ -1426,6 +1443,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\sunrisecare-hospital-low-resolution-logo-white-on-transparent-background.png"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\SunriseCare\\Hospital-System-Backend\\wwwroot\\images\\termin.png",
+      "SourceId": "Hospital System Management",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\SunriseCare\\Hospital-System-Backend\\wwwroot\\",
+      "BasePath": "_content/Hospital System Management",
+      "RelativePath": "images/termin.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\termin.png"
     },
     {
       "Identity": "C:\\Users\\Admin\\Desktop\\SunriseCare\\Hospital-System-Backend\\wwwroot\\js\\site.js",

@@ -81,6 +81,10 @@
       "PackagePath": "staticwebassets\\images\\phone.png"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\SunriseCare\\Hospital-System-Backend\\wwwroot\\images\\regjistrimi.png",
+      "PackagePath": "staticwebassets\\images\\regjistrimi.png"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\SunriseCare\\Hospital-System-Backend\\wwwroot\\images\\renato-janusic.jpg",
       "PackagePath": "staticwebassets\\images\\renato-janusic.jpg"
     },
@@ -91,6 +95,10 @@
     {
       "Id": "C:\\Users\\Admin\\Desktop\\SunriseCare\\Hospital-System-Backend\\wwwroot\\images\\sunrisecare-hospital-low-resolution-logo-white-on-transparent-background.png",
       "PackagePath": "staticwebassets\\images\\sunrisecare-hospital-low-resolution-logo-white-on-transparent-background.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SunriseCare\\Hospital-System-Backend\\wwwroot\\images\\termin.png",
+      "PackagePath": "staticwebassets\\images\\termin.png"
     },
     {
       "Id": "C:\\Users\\Admin\\Desktop\\SunriseCare\\Hospital-System-Backend\\wwwroot\\js\\site.js",
