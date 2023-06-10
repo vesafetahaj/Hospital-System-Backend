@@ -215,6 +215,12 @@ namespace Hospital_System_Management.Controllers
             return View(appointments);
 
         }
+        //Services
+        public IActionResult Services()
+        {
+            return View();
+        }
+
 
     }
 

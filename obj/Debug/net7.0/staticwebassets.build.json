@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WvoIYyTpiDLE/BJ1EpADgHFOONAKEp58UXLBaO0cZos=",
+  "Hash": "Q7sYUTTnQwRfr2DeteE12lKU4F6kSvn1VKb6pPRtGBM=",
   "Source": "Hospital System Management",
   "BasePath": "_content/Hospital System Management",
   "Mode": "Default",
@@ -1137,6 +1137,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\bujar-vrella.jpg"
+    },
+    {
+      "Identity": "D:\\Desktop\\Hospital System LAB1\\Hospital-System-Backend\\wwwroot\\images\\customer.png",
+      "SourceId": "Hospital System Management",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\Hospital System LAB1\\Hospital-System-Backend\\wwwroot\\",
+      "BasePath": "_content/Hospital System Management",
+      "RelativePath": "images/customer.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\customer.png"
     },
     {
       "Identity": "D:\\Desktop\\Hospital System LAB1\\Hospital-System-Backend\\wwwroot\\images\\dashboard-doctor.jpg",

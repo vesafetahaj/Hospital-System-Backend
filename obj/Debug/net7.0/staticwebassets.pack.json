@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\images\\bujar-vrella.jpg"
     },
     {
+      "Id": "D:\\Desktop\\Hospital System LAB1\\Hospital-System-Backend\\wwwroot\\images\\customer.png",
+      "PackagePath": "staticwebassets\\images\\customer.png"
+    },
+    {
       "Id": "D:\\Desktop\\Hospital System LAB1\\Hospital-System-Backend\\wwwroot\\images\\dashboard-doctor.jpg",
       "PackagePath": "staticwebassets\\images\\dashboard-doctor.jpg"
     },

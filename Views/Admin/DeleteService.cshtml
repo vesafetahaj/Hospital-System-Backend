@@ -1,0 +1,30 @@
+﻿@model Hospital_System_Management.Models.DoctorModel
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div id="main">
+    <h1>Delete Doctor</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form method="post" action="@Url.Action("DeleteConfirmedDoctor", "Admin")">
+                    <div class="alert alert-danger">
+                        <p>Are you sure you want to delete the doctor with the following details?</p>
+                        <ul>
+                            <li><strong>Name:</strong> @Model.Name</li>
+                            <li><strong>Specialization:</strong> @Model.Specialization</li>
+                            <li><strong>Email:</strong> @Model.Email</li>
+                            <li><strong>PhoneNumber:</strong> @Model.PhoneNumber</li>
+                            <li><strong>Address:</strong> @Model.Address</li>
+                            <li><strong>PhotoUrl:</strong> @Model.PhotoUrl</li>
+                        </ul>
+                    </div>
+                    <input type="hidden" name="id" value="@Model.Id" />
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <a href="@Url.Action("Doctors", "Admin")" class="btn btn-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
