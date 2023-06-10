@@ -199,6 +199,19 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
+        public ActionResult SearchDoctors(string query)
+        {
+            if (!string.IsNullOrEmpty(query))
+            {
+                var doctors = _context.Doctor
+                    .Where(d => d.Name.Contains(query) || d.Specialization.Contains(query))
+                    .ToList();
+                return View("Doctors", doctors);
+            }
+
+            var allDoctors = _context.Doctor.ToList();
+            return View("Doctors", allDoctors);
+        }
 
     }
 
