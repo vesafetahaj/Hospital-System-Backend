@@ -25,7 +25,9 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
-       
+
+    
+
         // Contact CRUD
         public ActionResult Contact()
         {
@@ -216,10 +218,104 @@ namespace Hospital_System_Management.Controllers
 
         }
         //Services
-        public IActionResult Services()
+     
+
+        public ActionResult Services()
+        {
+            var service = _context.Sherbimi.ToList();
+            return View(service);
+        }
+
+        [HttpGet]
+        public IActionResult EditService(int id)
+        {
+            var service = _context.Sherbimi.FirstOrDefault(d => d.Id == id);
+            if (service == null)
+            {
+                return NotFound();
+            }
+
+            return View(service);
+        }
+
+        [HttpPost]
+        public IActionResult EditService(ServiceModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var service = _context.Sherbimi.FirstOrDefault(d => d.Id == model.Id);
+                if (service == null)
+                {
+                    return NotFound();
+                }
+
+                service.Name = model.Name;
+                service.Pershkrimi = model.Pershkrimi;
+                service.PhotoUrl = model.PhotoUrl;
+
+                _context.SaveChanges();
+                return RedirectToAction("Services");
+            }
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult DeleteService(int id)
+        {
+            var service = _context.Sherbimi.FirstOrDefault(c => c.Id == id);
+            if (service == null)
+            {
+                return NotFound();
+            }
+
+            return View(service);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteConfirmedService(int id)
+        {
+            var service = _context.Sherbimi.FirstOrDefault(d => d.Id == id);
+            if (service == null)
+            {
+                return NotFound();
+            }
+
+            _context.Sherbimi.Remove(service);
+            _context.SaveChanges();
+            return RedirectToAction("Services");
+        }
+        [HttpPost]
+        public IActionResult CreateService(ServiceModel model)
+        {
+            if (ModelState.IsValid)
+            {
+
+                var service = new ServiceModel
+                {
+
+                    Name = model.Name,
+                    Pershkrimi= model.Pershkrimi,
+                    PhotoUrl = model.PhotoUrl
+                };
+
+
+                _context.Sherbimi.Add(service);
+                _context.SaveChanges();
+
+                return RedirectToAction("Services");
+            }
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult CreateService()
         {
             return View();
         }
+        
+        
 
 
     }

@@ -1,28 +1,25 @@
-﻿@model Hospital_System_Management.Models.DoctorModel
+﻿@model Hospital_System_Management.Models.ServiceModel
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 <div id="main">
-    <h1>Delete Doctor</h1>
+    <h1>Delete Service</h1>
 
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <form method="post" action="@Url.Action("DeleteConfirmedDoctor", "Admin")">
+                <form method="post" action="@Url.Action("DeleteConfirmedService", "Admin")">
                     <div class="alert alert-danger">
-                        <p>Are you sure you want to delete the doctor with the following details?</p>
+                        <p>Are you sure you want to delete the service with the following details?</p>
                         <ul>
                             <li><strong>Name:</strong> @Model.Name</li>
-                            <li><strong>Specialization:</strong> @Model.Specialization</li>
-                            <li><strong>Email:</strong> @Model.Email</li>
-                            <li><strong>PhoneNumber:</strong> @Model.PhoneNumber</li>
-                            <li><strong>Address:</strong> @Model.Address</li>
+                            <li><strong>Description:</strong> @Model.Pershkrimi</li>
                             <li><strong>PhotoUrl:</strong> @Model.PhotoUrl</li>
                         </ul>
                     </div>
                     <input type="hidden" name="id" value="@Model.Id" />
                     <button type="submit" class="btn btn-danger">Delete</button>
-                    <a href="@Url.Action("Doctors", "Admin")" class="btn btn-secondary">Cancel</a>
+                    <a href="@Url.Action("Services", "Admin")" class="btn btn-secondary">Cancel</a>
                 </form>
             </div>
         </div>

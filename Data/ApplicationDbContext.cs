@@ -16,5 +16,7 @@ namespace Hospital_System_Management.Data
         public DbSet<RegisterModel> MakeReservation { get; set; }
 
         public DbSet<ReservationModel> OnlineReservation { get; set; }
+
+        public DbSet<ServiceModel> Sherbimi { get; set; }
     }
 }

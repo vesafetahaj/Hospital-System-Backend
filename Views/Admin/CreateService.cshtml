@@ -1,15 +1,15 @@
-﻿@model DoctorModel
+﻿@model  ServiceModel
 
 @{
-    ViewData["Title"] = "Create Doctor";
+    ViewData["Title"] = "Create Service";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <div class="main">
     <div class="row">
         <div class="col-md-6">
-            <form method="post" action="@Url.Action("CreateDoctor", "Admin")">
-                <h5>Create New Doctor</h5>
+            <form method="post" action="@Url.Action("CreateService", "Admin")">
+                <h5>Add New Services</h5>
                 <hr />
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-floating mb-3">
@@ -19,27 +19,9 @@
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input asp-for="Specialization" class="form-control" aria-required="true" name="Specialization" />
-                    <label asp-for="Specialization">Specialization</label>
-                    <span as-validation-for="Specialization" class="text-danger"></span>
-                </div>
-
-                <div class="form-floating mb-3">
-                    <input asp-for="Email" class="form-control" aria-required="true" name="Email" />
-                    <label asp-for="Email">Email</label>
-                    <span as-validation-for="Email" class="text-danger"></span>
-                </div>
-
-                <div class="form-floating mb-3">
-                    <input asp-for="PhoneNumber" class="form-control" aria-required="true" name="PhoneNumber" />
-                    <label asp-for="PhoneNumber">Phone Number</label>
-                    <span as-validation-for="PhoneNumber" class="text-danger"></span>
-                </div>
-
-                <div class="form-floating mb-3">
-                    <input asp-for="Address" class="form-control" aria-required="true" name="Address" />
-                    <label asp-for="Address">Address</label>
-                    <span as-validation-for="Address" class="text-danger"></span>
+                    <input asp-for="Pershkrimi" class="form-control" aria-required="true" name="Pershkrimi" />
+                    <label asp-for="Pershkrimi">Pershkrimi</label>
+                    <span as-validation-for="Pershkrimi" class="text-danger"></span>
                 </div>
 
                 <div class="form-floating mb-3">
