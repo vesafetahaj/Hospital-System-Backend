@@ -29,14 +29,7 @@
     <div style="display:flex; justify-content:end; margin-top: -40px">
         <a href="@Url.Action("CreateDoctor", "Admin")" class="btn btn-outline-primary">Create New Doctor</a>
     </div>
-    <div class="row mt-4">
-        <form method="get" action="@Url.Action("SearchDoctors", "Admin")">
-            <div class="input-group mb-3">
-                <input type="text" name="query" class="form-control" placeholder="Search by name or specialization" aria-label="Search" aria-describedby="search-button">
-                <button class="btn btn-primary" type="submit" id="search-button">Search</button>
-            </div>
-        </form>
-    </div>
+    
     <div class="row mt-4">
         @if (Model.Count > 0)
         {
