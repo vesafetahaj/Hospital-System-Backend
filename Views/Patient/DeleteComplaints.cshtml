@@ -1,0 +1,29 @@
+﻿@model Hospital_System_Management.Models.ComplaintModel
+@{
+    Layout = "~/Views/Shared/_PatientLayout.cshtml";
+}
+<div id="main">
+    <h1>Cancel Appointment</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form method="post" action="@Url.Action("DeleteConfirmedC", "Patient")">
+                    <div class="alert alert-danger">
+                        <p>Are you sure you want to cancel the appointment with the following details?</p>
+                        <ul>
+                            <li><strong>First Name:</strong> @Model.Name</li>
+                            <li><strong>Last Name:</strong> @Model.Surname</li>
+                            <li><strong>Date:</strong> @Model.DateSubmitted</li>
+                            <li><strong>Explanation:</strong> @Model.Explanation</li>
+                          
+                        </ul>
+                    </div>
+                    <input type="hidden" name="id" value="@Model.Id" />
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <a href="@Url.Action("MyComplaints", "Patient")" class="btn btn-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

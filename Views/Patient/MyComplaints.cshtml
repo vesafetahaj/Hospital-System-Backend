@@ -1,0 +1,47 @@
+﻿@using Hospital_System_Management.Models
+
+@{
+    Layout = "~/Views/Shared/_PatientLayout.cshtml";
+}
+@model List<ComplaintModel>
+
+<div id="main">
+    <h1>Your Complaints </h1>
+    <br />
+
+    @if (Model.Count > 0)
+    {
+        <table class="table table-hover">
+            <thead style="background-color: #9abddc;">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Date submitted</th>
+                    <th>Explanation</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody style="background-color: #EAF0FA;">
+                @foreach (var submission in Model)
+                {
+                    <tr>
+                        <td>@submission.Name</td>
+                        <td>@submission.Surname</td>
+                        <td>@submission.DateSubmitted</td>
+                        <td>@submission.Explanation</td>
+                      
+                        <td>
+                            <a href="@Url.Action("EditComplaints", "Patient", new { id = submission.Id })" class="btn btn-primary btn-sm">Edit</a>
+                            <a href="@Url.Action("DeleteComplaints", "Patient", new { id = submission.Id })" class="btn btn-danger btn-sm">Delete</a>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No appointments  found.</p>
+    }
+</div>

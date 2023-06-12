@@ -22,10 +22,7 @@ namespace Hospital_System_Management.Controllers
         }
 
 
-        public IActionResult Regjistrimi()
-        {
-            return View();
-        }
+
         public IActionResult Kontakt()
         {
             return View();
@@ -36,6 +33,11 @@ namespace Hospital_System_Management.Controllers
         }
 
         public IActionResult Rezervimi()
+        {
+            return View();
+        }
+
+        public IActionResult Ankesa()
         {
             return View();
         }
@@ -137,6 +139,103 @@ namespace Hospital_System_Management.Controllers
         [HttpGet]
 
         public IActionResult CreateSuccessO()
+        {
+            return View();
+        }
+
+        //crud ankesa
+        public ActionResult MyComplaints()
+        {
+            var submissions = _context.Complaints.ToList();
+            return View(submissions);
+        }
+        [HttpGet]
+        public IActionResult EditComplaints(int id)
+        {
+            var complaint = _context.Complaints.FirstOrDefault(c => c.Id == id);
+            if (complaint == null)
+            {
+                return NotFound();
+            }
+
+            return View(complaint);
+        }
+
+        [HttpPost]
+        public IActionResult EditComplaints(ComplaintModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var complaint = _context.Complaints.FirstOrDefault(c => c.Id == model.Id);
+                if (complaint == null)
+                {
+                    return NotFound();
+                }
+                complaint.Name = model.Name;
+                complaint.Surname = model.Surname;
+                complaint.DateSubmitted = model.DateSubmitted;
+                complaint.Explanation = model.Explanation;
+
+                _context.SaveChanges();
+                return RedirectToAction("MyComplaints");
+            }
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult DeleteComplaints(int id)
+        {
+            var complaint = _context.Complaints.FirstOrDefault(c => c.Id == id);
+            if (complaint == null)
+            {
+                return NotFound();
+            }
+
+            return View(complaint);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteConfirmedC(int id)
+        {
+            var complaint = _context.Complaints.FirstOrDefault(c => c.Id == id);
+            if (complaint == null)
+            {
+                return NotFound();
+            }
+
+            _context.Complaints.Remove(complaint);
+            _context.SaveChanges();
+            return RedirectToAction("MyComplaints");
+        }
+        [HttpGet]
+        public IActionResult CreateC()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateC(ComplaintModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                model.DateSubmitted = DateTime.Now;
+                _context.Complaints.Add(model);
+                _context.SaveChanges();
+                return RedirectToAction("CreateSuccessA");
+            }
+
+            return View(model);
+        }
+        [HttpGet]
+        public IActionResult SuccessA()
+        {
+            var complaint = _context.Complaints.ToList();
+            return View(complaint);
+        }
+        [HttpGet]
+
+        public IActionResult CreateSuccessA()
         {
             return View();
         }
