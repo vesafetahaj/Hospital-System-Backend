@@ -110,7 +110,7 @@
                                             <td>@pay.DoctorName</td>
                                             <td>@pay.Kontrolla</td>
                                             <td>@pay.PaymentTotal</td>
-                                            <td>@pay.DateSubmitted.ToString("yyyy-MM-dd HH:mm")</td>
+                                            <td>@pay.DateSubmitted.ToString("yyyy-MM-dd")</td>
                                             <td>
                                                 <a href="@Url.Action("EditPayment", "Receptionist", new { id = pay.Id })" class="btn btn-primary btn-sm">Edit</a>
                                                 <a href="@Url.Action("DeletePayment", "Receptionist", new { id = pay.Id })" class="btn btn-danger btn-sm">Delete</a>

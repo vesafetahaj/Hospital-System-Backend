@@ -110,7 +110,7 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
-
+        
         [HttpPost]
         public IActionResult Create(RegisterModel model)
         {

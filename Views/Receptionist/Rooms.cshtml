@@ -220,7 +220,7 @@
                                             <td>@room.Name</td>
                                             <td>@room.Surname</td>
                                             <td>@room.BirthPlace</td>
-                                            <td>@room.DateSubmitted.ToString("yyyy-MM-dd HH:mm")</td>
+                                            <td>@room.DateSubmitted.ToString("yyyy-MM-dd")</td>
                                             <td>@room.IDCard</td>
                                             <td>
                                                 <a href="@Url.Action("EditRoom", "Receptionist", new { id = room.Id })" class="btn btn-primary btn-sm">Edit</a>
