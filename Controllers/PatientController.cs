@@ -7,7 +7,7 @@ using System.Data;
 
 namespace Hospital_System_Management.Controllers
 {
-    [Authorize(Roles = "Patient")]
+    [Authorize(Roles = "Patient,receptionist,Admin,Doctor")]
     public class PatientController : Controller
     {
         private readonly ApplicationDbContext _context;
