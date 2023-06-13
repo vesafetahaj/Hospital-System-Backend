@@ -334,17 +334,6 @@ CREATE TABLE ContactForms (
     DateSubmitted DATETIME NOT NULL
 );
 
-CREATE TABLE RegisterForm (
-    Id INT PRIMARY KEY IDENTITY (1,1),
-    Name NVARCHAR(100) NOT NULL,
-    Surname NVARCHAR(100) NOT NULL,
-    Age INT NOT NULL,
-	BirthPlace NVARCHAR(100) NOT NULL,
-	DateSubmitted DATE NOT NULL,
-    IDCard NVARCHAR(100) NOT NULL
-);
-
-
 select * from ContactForms
 select * from RegisterForm
 select * from [AspNetRoles]
@@ -420,7 +409,15 @@ Id INT PRIMARY KEY IDENTITY (1,1),
     Sherbimi NVARCHAR(100) NOT NULL,
     DateSubmitted DATETIME NOT NULL
 );
-	
+
+CREATE TABLE Raport (
+    Id INT PRIMARY KEY IDENTITY (1,1),
+    Name NVARCHAR(100) NOT NULL,
+    Surname NVARCHAR(100) NOT NULL,
+    Birthday datetime NOT NULL,
+    BirthPlace NVARCHAR(100) NOT NULL,
+    Raporti NVARCHAR(100) NOT NULL
+);
 
 
 select * from OnlineReservation
