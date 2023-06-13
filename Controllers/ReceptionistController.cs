@@ -339,7 +339,13 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
+        // Terminet
+        public ActionResult Appointments()
+        {
+            var appointments = _context.OnlineReservation.ToList();
+            return View(appointments);
 
+        }
 
     }
 

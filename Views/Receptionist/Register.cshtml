@@ -31,7 +31,7 @@
                         <td>@register.Surname</td>
                         <td>@register.Age</td>
                         <td>@register.BirthPlace</td>
-                        <td>@register.DateSubmitted</td>
+                        <td>@register.DateSubmitted.ToString("yyyy-MM-dd HH:mm")</td>
                         <td>@register.IDCard</td>
                         <td>
                             <a href="@Url.Action("EditRegistration", "Receptionist", new { id = register.Id })" class="btn btn-primary btn-sm">Edit</a>
