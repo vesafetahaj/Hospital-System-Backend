@@ -33,6 +33,11 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
+        public IActionResult Payment()
+        {
+            return View();
+        }
+        
         // REGISTER CRUD
         public ActionResult Register()
         {
@@ -234,7 +239,109 @@ namespace Hospital_System_Management.Controllers
             return View();
         }
 
-    }  
+        // Payment Crud 
+
+        public ActionResult Checks()
+        {
+            var submissions = _context.Payment.ToList();
+            return View(submissions);
+        }
+        [HttpGet]
+        public IActionResult EditPayment(int id)
+        {
+            var pay = _context.Payment.FirstOrDefault(c => c.Id == id);
+            if (pay == null)
+            {
+                return NotFound();
+            }
+
+            return View(pay);
+        }
+
+        [HttpPost]
+        public IActionResult EditPayment(PaymentModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var pay = _context.Payment.FirstOrDefault(c => c.Id == model.Id);
+                if (pay == null)
+                {
+                    return NotFound();
+                }
+                pay.Name = model.Name;
+                pay.Surname = model.Surname;
+                pay.DeptName = model.DeptName;
+                pay.DoctorName = model.DoctorName;
+                pay.Kontrolla = model.Kontrolla;
+                pay.DateSubmitted = model.DateSubmitted;
+                pay.PaymentTotal = model.PaymentTotal;
+
+                _context.SaveChanges();
+                return RedirectToAction("Checks");
+            }
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult DeletePayment(int id)
+        {
+            var pay = _context.Payment.FirstOrDefault(c => c.Id == id);
+            if (pay == null)
+            {
+                return NotFound();
+            }
+
+            return View(pay);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteConfirmedP(int id)
+        {
+            var pay = _context.Payment.FirstOrDefault(c => c.Id == id);
+            if (pay == null)
+            {
+                return NotFound();
+            }
+
+            _context.Payment.Remove(pay);
+            _context.SaveChanges();
+            return RedirectToAction("Checks");
+        }
+        [HttpGet]
+        public IActionResult CreatePayment()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreatePayment(PaymentModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                model.DateSubmitted = DateTime.Now;
+                _context.Payment.Add(model);
+                _context.SaveChanges();
+                return RedirectToAction("CreateSuccessP");
+            }
+
+            return View(model);
+        }
+        [HttpGet]
+        public IActionResult SuccessP()
+        {
+            var pay = _context.Payment.ToList();
+            return View(pay);
+        }
+        [HttpGet]
+
+        public IActionResult CreateSuccessP()
+        {
+            return View();
+        }
+
+
+    }
 
 }
 

@@ -1,0 +1,93 @@
+@{
+    Layout = "~/Views/Shared/_ReceptionistLayout.cshtml";
+}
+@using Hospital_System_Management.Models;
+@model PaymentModel;
+<link rel="stylesheet" href="'https://fonts.googleapis.com/css?family=PT+Sans">
+
+<style>
+body{
+  background: #fff;
+  font-family: 'PT Sans', sans-serif;
+}
+h2{
+  padding-top: 1.5rem;
+}
+a{
+  color: #333;
+}
+a:hover{
+  color: #da5767;
+  text-decoration: none;
+}
+.card{
+  border: 0.40rem solid #f8f9fa;
+  top: 1%;
+}
+.form-control{
+  background-color: #f8f9fa;
+  padding: 20px;
+  padding: 25px 15px;
+  margin-bottom: 1.3rem;
+}
+
+.form-control:focus {
+
+    color: #000000;
+    background-color: #ffffff;
+     border: 3px solid #66b0ff;
+    outline: 0;
+    box-shadow: none;
+
+}
+
+    .btn-primary {
+        padding: 0.6rem 1.2rem;
+        background: #66b0ff;
+        border: 2px solid #66b0ff;
+    }
+.btn-primary:hover {
+            background-color: #6bff;
+            border-color: #6bff;
+            transition: .3s;
+
+}
+</style>
+<div class="container">
+    <div class="row justify-content-center"> 
+        <div class="col-md-5">
+            <div class="card">
+                <h2 class="card-title text-center">Make a Payment</h2>
+                <div class="card-body py-md-4">
+                    <form action="@Url.Action("CreatePayment", "Receptionist")" method="post" name="mesazhi">
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.Name, new { @class = "form-control", placeholder = "First Name" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.Surname, new { @class = "form-control", placeholder = "Last Name" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.DeptName, new {@class = "form-control", @type="text", placeholder = "Department Name" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.DoctorName, new { @class = "form-control", placeholder = "Doctor Name" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.Kontrolla, new { @class = "form-control", @type="string",placeholder = "Control Name" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.PaymentTotal, new {@class = "form-control", @type="money", placeholder = "Payment" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.DateSubmitted, new {@class = "form-control", @type="date", placeholder = "Date submitted" })
+                        </div>
+                        <div class="d-flex flex-row align-items-center justify-content-between">
+                           <input type="submit" value="Pay" class="btn btn-primary" name="save">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

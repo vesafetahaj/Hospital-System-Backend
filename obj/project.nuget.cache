@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RSoxZDWonjXr+Wj8EZTI1W4OpqeKSpLHiTsnpt3vOhAYzYZ3PFqbXP+YEn5X9s9HcnNQyH/vTEnOKz3Dw6oWZg==",
+  "dgSpecHash": "bBkjGT9rBKgB7hNWZ4eDUhsxOVF4RagtuMIaifAcZcKHrdBVjvxjWIebukBWS5hVWDoOdMNV41p9m3L8g/3yqQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\SunriseCareHospital\\Hospital-System-Backend\\Hospital System Management.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\hospital8\\Hospital-System-Backend\\Hospital System Management.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

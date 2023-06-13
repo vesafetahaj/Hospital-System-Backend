@@ -1,4 +1,4 @@
-﻿@model Hospital_System_Management.Models.RegisterModel
+﻿@model Hospital_System_Management.Models.PaymentModel
 @{
     Layout = "~/Views/Shared/_ReceptionistLayout.cshtml";
 }
@@ -6,9 +6,9 @@
 
     <div class="container">
         <div class="row">
-            <h1>Edit Contact Form Submission</h1>
+            <h1>Edit Payment </h1>
             <div class="col-md-6">
-                <form method="post" action="@Url.Action("EditRegistration", "Receptionist")">
+                <form method="post" action="@Url.Action("EditPayment", "Receptionist")">
                     <input type="hidden" name="Id" value="@Model.Id" />
                     <div class="form-group">
                         <label for="Name">First Name</label>
@@ -19,22 +19,24 @@
                         <input type="text" class="form-control" id="lastName" name="Surname" value="@Model.Surname" />
                     </div>
                     <div class="form-group">
-                        <label for="age">Age</label>
-                        <input type="age" class="form-control" id="age" name="Age" value="@Model.Age" />
+                        <label for="age">Department name</label>
+                        <input type="text" class="form-control" id="age" name="Age" value="@Model.DeptName" />
                     </div>
                     <div class="form-group">
                         <label for="BirthPlace">Place of birth</label>
-                        <input type="BirthPlace" class="form-control" id="BirthPlace" name="BirthPlace" value="@Model.BirthPlace" />
+                        <input type="text" class="form-control" id="BirthPlace" name="BirthPlace" value="@Model.DoctorName" />
                     </div>
-
                     <div class="form-group">
-                        <label for="DateSubmitted">Date of birth</label>
-                        <input type="DateSubmitted" class="form-control" id="DateSubmitted" name="DateSubmitted" value="@Model.DateSubmitted" />
+                        <label for="DateSubmitted">Control name</label>
+                        <input type="date" class="form-control" id="kontrolla" name="DateSubmitted" value="@Model.Kontrolla" />
                     </div>
-
                     <div class="form-group">
-                        <label for="IDCard">Id Card</label>
-                        <input type="IDCard" class="form-control" id="IDCard" name="IDCard" value="@Model.IDCard" />
+                        <label for="IDCard">Payment</label>
+                        <input type="number" class="form-control" id="pagesa" name="pagesa" value="@Model.PaymentTotal" />
+                    </div>
+                    <div class="form-group">
+                        <label for="DateSubmitted">Date submitted</label>
+                        <input type="date" class="form-control" id="DateSubmitted" name="DateSubmitted" value="@Model.DateSubmitted" />
                     </div>
                    
 
