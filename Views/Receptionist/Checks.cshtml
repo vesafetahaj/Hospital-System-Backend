@@ -1,0 +1,135 @@
+@using Hospital_System_Management.Models
+
+@{
+    Layout = "~/Views/Shared/_ReceptionistLayout.cshtml";
+}
+@model List<PaymentModel>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+
+    .home-section {
+        position: relative;
+        min-height: 100vh;
+        width: calc(100% - 240px);
+        transition: all 0.5s ease;
+    }
+
+
+
+
+
+        .home-section .home-content {
+            position: relative;
+            padding-top: 104px;
+        }
+
+
+    .home-content .sales-boxes {
+        display: flex;
+        justify-content: space-between;
+        /* padding: 0 20px; */
+    }
+
+        /* left box */
+        .home-content .sales-boxes .recent-sales {
+            width: 100%;
+            background: #fff;
+            padding: 20px 10px;
+            margin: 0 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .home-content .sales-boxes .sales-details {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+    .sales-boxes .box .title {
+        font-size: 24px;
+        font-weight: 500;
+        /* margin-bottom: 10px; */
+    }
+
+    .sales-boxes .sales-details tr.topic {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .sales-boxes .sales-details td {
+        font-size: 18px;
+        color: #333;
+        font-size: 400;
+        text-decoration: none;
+    }
+
+</style>
+
+<section class="home-section">
+    <div class="home-content">
+
+        <div class="sales-boxes">
+            <div class="recent-sales box">
+                <div class="title">Recent payments</div>
+                <br />
+                <div class="sales-details">
+                    <div id="main">
+                        <br />
+
+                        @if (Model.Count > 0)
+                        {
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Department Name </th>
+                                        <th>Doctor Name</th>
+                                        <th>Control Name</th>
+                                        <th>Payment</th>
+                                        <th>Date submitted</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var pay in Model)
+                                    {
+                                        <tr>
+                                            <td>@pay.Name</td>
+                                            <td>@pay.Surname</td>
+                                            <td>@pay.DeptName</td>
+                                            <td>@pay.DoctorName</td>
+                                            <td>@pay.Kontrolla</td>
+                                            <td>@pay.PaymentTotal</td>
+                                            <td>@pay.DateSubmitted</td>
+                                            <td>
+                                                <a href="@Url.Action("EditPayment", "Receptionist", new { id = pay.Id })" class="btn btn-primary btn-sm">Edit</a>
+                                                <a href="@Url.Action("DeletePayment", "Receptionist", new { id = pay.Id })" class="btn btn-danger btn-sm">Delete</a>
+
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        }
+                        else
+                        {
+                            <p>No payments done .</p>
+                        }
+                    </div>
+                </div>
+
+            </div>
+</section>
+
+
+
