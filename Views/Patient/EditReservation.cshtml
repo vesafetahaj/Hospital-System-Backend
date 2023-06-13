@@ -11,28 +11,28 @@
                 <form method="post" action="@Url.Action("EditReservation", "Patient")">
                     <input type="hidden" name="Id" value="@Model.Id" />
                     <div class="form-group">
-                        <label for="Name">First Name</label>
-                        <input type="text" class="form-control" id="firstName" name="FirstName" value="@Model.Name" />
+                        <label for="FirstName">First Name</label>
+                        <input type="text" class="form-control" id="FirstName" name="FirstName" value="@Model.Name" />
                     </div>
                     <div class="form-group">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" class="form-control" id="lastName" name="LastName" value="@Model.Surname" />
+                        <label for="LastName">Last Name</label>
+                        <input type="text" class="form-control" id="LastName" name="LastName" value="@Model.Surname" />
                     </div>
                     <div class="form-group">
-                        <label for="email">Age</label>
-                        <input type="number" class="form-control" id="email" name="Email" value="@Model.Mosha" />
+                        <label for="Mosha">Age</label>
+                        <input type="number" class="form-control" id="Mosha" name="Mosha" value="@Model.Mosha" />
                     </div>
                     <div class="form-group">
-                        <label for="phone">Id Card</label>
-                        <input type="text" class="form-control" id="phone" name="Phone" value="@Model.IDCard" />
+                        <label for="IDCard">Id Card</label>
+                        <input type="text" class="form-control" id="IDCard" name="IDCard" value="@Model.IDCard" />
                     </div>
                     <div class="form-group">
-                        <label for="phone">Services</label>
-                        <input type="text" class="form-control" id="sherbimi" name="Card" value="@Model.Sherbimi" />
+                        <label for="Sherbimi">Services</label>
+                        <input type="text" class="form-control" id="Sherbimi" name="Sherbimi" value="@Model.Sherbimi" />
                     </div>
                     <div class="form-group">
-                        <label for="phone">Date</label>
-                        <input type="datetime" class="form-control" id="data" name="Date" value="@Model.DateSubmitted" />
+                        <label for="Date">Date</label>
+                        <input type="datetime" class="form-control" id="Date" name="Date" value="@Model.DateSubmitted.ToString("yyyy-MM-dd")" />
                     </div>
                     
 

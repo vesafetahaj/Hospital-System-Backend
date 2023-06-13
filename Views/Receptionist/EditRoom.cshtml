@@ -28,15 +28,15 @@
                     </div>
                     <div class="form-group">
                         <label for="DateSubmitted">Date of birth</label>
-                        <input type="date" class="form-control" id="DateSubmitted" name="DateSubmitted" value="@Model.DateSubmitted" />
+                        <input type="date" class="form-control" id="DateSubmitted" name="DateSubmitted" value="@Model.DateSubmitted.ToString("yyyy-MM-dd")" />
                     </div>
 
                     <div class="form-group">
                         <label for="IDCard">Id Card</label>
                         <input type="number" class="form-control" id="IDCard" name="IDCard" value="@Model.IDCard" />
                     </div>
-                   
 
+                    <br />
                     <button type="submit" class="btn btn-primary">Save</button>
                 </form>
             </div>

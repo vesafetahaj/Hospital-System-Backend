@@ -152,6 +152,7 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+
 CREATE TABLE [dbo].[AspNetUserLogins](
 	[LoginProvider] [nvarchar](128) NOT NULL,
 	[ProviderKey] [nvarchar](128) NOT NULL,
@@ -422,3 +423,4 @@ CREATE TABLE Raport (
 
 select * from OnlineReservation
 select * from RoomReservation
+select * from Raport
