@@ -28,10 +28,12 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
-        public IActionResult Appointments()
+
+       /* public IActionResult Appointments()
         {
             return View();
-        }
+        }*/
+
         public IActionResult Medications()
         {
             return View();
@@ -42,6 +44,13 @@ namespace Hospital_System_Management.Controllers
         {
             var submissions = _context.Raport.ToList();
             return View(submissions);
+        }
+
+
+        private readonly ApplicationDbContext _context;
+        public AdminController(ApplicationDbContext context)
+        {
+            _context = context;
         }
 
 
@@ -136,7 +145,13 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
+        //terminet
+        public ActionResult Appointments()
+        {
+            var raports = _context.OnlineReservation.ToList();
+            return View(raports);
 
+        }
 
     }
 }

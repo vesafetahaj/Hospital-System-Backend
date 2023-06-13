@@ -1,125 +1,46 @@
+@using Hospital_System_Management.Models
+
 @{
-    ViewData["Title"] = "Doctor Dashboard";
     Layout = "~/Views/Shared/_DoctorLayout.cshtml";
 }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <style>
-        body {
-            background: #d7dfe4;
-        }
+@model List<ReservationModel>
 
-        table, th {
-            padding: 1rem;
-            border-collapse: collapse;
-        }
+<div id="main">
+    <h1>Your Appointment </h1>
+    <br />
 
-        table, td {
-            padding: 1rem;
-            border-collapse: collapse;
-            text-align: center;
-        }
-
-        main.table-appointments {
-            width: 68vw;
-            height: 58vh;
-            background-color: rgba(167, 164, 164, 0.333);
-            backdrop-filter: blur(5px);
-            box-shadow: 0 .8rem .8rem #0005;
-            border-radius: .8rem;
-            overflow: hidden;
-            margin-left: 13rem;
-            margin-top: 3rem;
-        }
-
-        .table-header {
-            width: 100%;
-            height: 13%;
-            background-color: #fff4;
-            padding: .8rem 1rem;
-        }
-
-            .table-header > h2 {
-                margin-top: -0.4rem;
-                margin-left: 2rem;
-            }
-
-        .table-body {
-            width: 95%;
-            max-height: calc(89% - .8rem);
-            background-color: #fffb;
-            margin: .8rem auto;
-            border-radius: .6rem;
-            overflow: auto;
-        }
-
-        table {
-            width: 100%;
-        }
-
-        thead th {
-            position: sticky;
-            top: 0;
-            left: 0;
-            background-color: #d5d1defe;
-        }
-
-        tbody tr:nth-child(even) {
-            background-color: #0000000b;
-        }
-
-        tbody tr:hover {
-            background-color: #fff6;
-        }
-
-    </style>
-</head>
-
-<body>
-
-    <main class="table-appointments">
-        <section class="table-header">
-            <h2>Appointments</h2>
-        </section>
-        <section class="table-body">
-            <table>
-                <thead>
+    @if (Model.Count > 0)
+    {
+        <table class="table table-hover">
+            <thead style="background-color: #9abddc;">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>ID Card</th>
+                    <th>Services</th>
+                    <th>Date submitted</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody style="background-color: #EAF0FA;">
+                @foreach (var submission in Model)
+                {
                     <tr>
-                        <th>Name</th>
-                        <th>Surname</th>
-                        <th>Age</th>
-                        <th>ID Card</th>
-                        <th>Services</th>
-                        <th>Date</th>
+                        <td>@submission.Name</td>
+                        <td>@submission.Surname</td>
+                        <td>@submission.Mosha</td>
+                        <td>@submission.IDCard</td>
+                        <td>@submission.Sherbimi</td>
+                        <td>@submission.DateSubmitted</td>
+                        
                     </tr>
-                </thead>
-            </table>
-        </section>
-
-    </main>
-
-
-
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-            document.getElementById("logo").style.transform = "translateX(250px)";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-            document.getElementById("logo").style.transform = "translateX(0)";
-        }
-    </script>
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
-</body>
-</html>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No appointments  found.</p>
+    }
+</div>

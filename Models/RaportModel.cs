@@ -12,7 +12,6 @@ namespace Hospital_System_Management.Models
         public string Surname { get; set; }
         public DateTime Birthday { get; set; }
         public string Birthplace { get; set; }
-
         public string Raporti { get; set; }
 
     }
