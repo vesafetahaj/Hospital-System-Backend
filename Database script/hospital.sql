@@ -354,7 +354,7 @@ insert into Doctor values ('Renato2 Janusic','stomatolog','renato2@gmail.com','0
 
 select * from Doctor
 insert into AspNetRoles values ('0378d864-8b37-4cf1-ad1e-902b9e43a9c1' ,  'Admin'  ,  'ADMIN'  ,  NULL)
-insert into AspNetRoles values ('16f8dade-a762-4715-a576-e946323d7057'  , ' Doctor',   ' DOCTOR ' ,   NULL)
+insert into AspNetRoles values ('16f8dade-a762-4715-a576-e946323d7057'  , 'Doctor',   'DOCTOR ' ,   NULL)
 insert into AspNetRoles values ('1c19b03c-5925-4d4e-85cb-89400de5ac08'  ,'receptionist',    'RECEPTIONIST'  ,  NULL)
 insert into AspNetRoles values ('a9c21ac5-aee2-4d82-94e5-06464a933482 ' ,  'Patient' ,   'PATIENT'  ,  NULL)
 
@@ -429,3 +429,5 @@ select * from Raport
 drop table Raport
 
 select * from Sherbimi
+
+--drop database HOSPITAL
