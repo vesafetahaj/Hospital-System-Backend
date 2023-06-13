@@ -1,0 +1,53 @@
+﻿@using Hospital_System_Management.Models
+
+@{
+    Layout = "~/Views/Shared/_DoctorLayout.cshtml";
+}
+@model List<RaportModel>
+
+<div id="main">
+    <h1>Your Raport </h1>
+    <br />
+    <style>
+        body {
+            background-color: #d7dfe4;
+        }
+    </style>
+    @if (Model.Count > 0)
+    {
+        <table class="table table-hover">
+            <thead style="background-color: #9abddc;">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Birthday</th>
+                    <th>Birthplace</th>
+                    <th>Raporti</th>
+                    <th>Action</th>
+
+                </tr>
+            </thead>
+            <tbody style="background-color: #EAF0FA;">
+                @foreach (var submission in Model)
+                {
+                    <tr>
+                        <td>@submission.Name</td>
+                        <td>@submission.Surname</td>
+                        <td>@submission.Birthday</td>
+                        <td>@submission.Birthplace</td>
+                        <td>@submission.Raporti</td>
+                        <td>
+                            <a href="@Url.Action("EditRaport", "Doctor", new { id = submission.Id })" class="btn btn-primary btn-sm">Edit</a>
+                            <a href="@Url.Action("DeleteRaport", "Doctor", new { id = submission.Id })" class="btn btn-danger btn-sm">Delete</a>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No raports found.</p>
+    }
+</div>

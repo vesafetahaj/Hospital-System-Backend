@@ -1,39 +1,155 @@
 @{
-    ViewData["Title"] = "Doctor Dashboard";
     Layout = "~/Views/Shared/_DoctorLayout.cshtml";
 }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <style>
+@using Hospital_System_Management.Models;
+@model RaportModel;
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<style>
 
-    </style>
-</head>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-<body>
+    body {
+        background: #d7dfe4;
+    }
+
+    body, input, textarea, a {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    #section {
+        width: 100%;
+        padding: 10px;
+        margin-left: -3.5rem;
+        margin-top: -2rem;
+    }
+
+    .box {
+        position: relative;
+        display: table;
+        width: 1100px;
+        margin: auto;
+        margin-top: 35px;
+        border-radius: 30px;
+    }
 
 
 
+    .form {
+        width: 65%;
+        margin-left: 200px;
+        padding: 40px 25px 35px 25px;
+        border-radius: 30px;
+        background-color: rgba(167, 164, 164, 0.333);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 .8rem .8rem #0005;
+    }
 
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-            document.getElementById("logo").style.transform = "translateX(250px)";
+        .form h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 28px;
+            margin-top: -5px;
+            margin-bottom: 1px;
+            text-align: center;
         }
 
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-            document.getElementById("logo").style.transform = "translateX(0)";
+
+
+    .form-title {
+        text-align: left;
+        margin-left: 23px;
+        font-size: 28px;
+        letter-spacing: 0.5px;
+    }
+
+    .form-fields {
+        display: table;
+        width: 100%;
+        padding: 15px 5px 5px 5px;
+    }
+
+        .form-fields input,
+        .form-fields textarea {
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 18px;
+            color: #555;
+            padding: 20px 10px 20px 5px;
+            width: 100%;
         }
-    </script>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+        .form-fields textarea {
+            height: 150px;
+            resize: none;
+        }
 
-</body>
-</html>
+    .form-group {
+        width: 46%;
+        float: left;
+        padding: 0px 30px;
+        margin: 13px 7px;
+        border-radius: 13px;
+        box-shadow: inset 3px 3px 3px #ecf0f3, inset -5px -5px 5px #787878;
+    }
+
+    .form-fields .form-group:last-child {
+        width: 96%;
+    }
+
+    .submit-button {
+        width: 96%;
+        height: 60px;
+        margin: 0px 12px;
+        border-radius: 30px;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        cursor: pointer;
+        text-align: center;
+        background: #787878;
+        transition: .5s;
+        margin-bottom: -2rem;
+    }
+
+        .submit-button:hover {
+            background: #9f9f9f;
+        }
+</style>
+<div id="main">
+    <section id="section">
+        <div class="box">
+            <div class="info">
+            </div>
+            <div class="form">
+                <h1><b>Add Raport</b></h1>
+
+                <form action="@Url.Action("Create", "Doctor")" method="post" name="mesazhi">
+                    <!-- aksioni - kontrolleri. -->
+                    <div class="form-fields">
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.Name, new { @class = "fname", placeholder = "First Name" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.Surname, new { @class = "lname", placeholder = "Last Name" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.Birthday, new {@type="date", placeholder = "Birthday" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.Birthplace, new { @class = "Birthplace", placeholder = "Birthplace" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextAreaFor(model => model.Raporti, new { @class = "Raporti", placeholder = "Raporti" })
+                        </div>
+
+                    </div>
+                    <input type="submit" value="Send raport" class="submit-button" name="save">
+                </form>
+            </div>
+        </div>
+    </section>
+</div>

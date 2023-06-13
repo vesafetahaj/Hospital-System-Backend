@@ -1,0 +1,29 @@
+﻿@model Hospital_System_Management.Models.RaportModel
+@{
+    Layout = "~/Views/Shared/_DoctorLayout.cshtml";
+}
+<div id="main">
+    <h1>Cancel Appointment</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form method="post" action="@Url.Action("DeleteConfirmedD", "Doctor")">
+                    <div class="alert alert-danger">
+                        <p>Are you sure you want to cancel the appointment with the following details?</p>
+                        <ul>
+                            <li><strong>First Name:</strong> @Model.Name</li>
+                            <li><strong>Last Name:</strong> @Model.Surname</li>
+                            <li><strong>Birthday:</strong> @Model.Birthday</li>
+                            <li><strong>Birthplace:</strong> @Model.Birthplace</li>
+                            <li><strong>Raport:</strong> @Model.Raporti</li>
+                        </ul>
+                    </div>
+                    <input type="hidden" name="id" value="@Model.Id" />
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <a href="@Url.Action("YourRaport", "Doctor")" class="btn btn-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
