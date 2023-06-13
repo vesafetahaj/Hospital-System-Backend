@@ -315,7 +315,13 @@ namespace Hospital_System_Management.Controllers
             return View(patients);
         }
 
+        //Complaints
 
+        public ActionResult Complaints()
+        {
+            var complaints = _context.Complaints.ToList();
+            return View(complaints);
+        }
 
 
     }

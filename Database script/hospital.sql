@@ -398,9 +398,10 @@ create table Complaints(
          Name NVARCHAR(100) NOT NULL,
          Surname NVARCHAR(100) NOT NULL,
          DateSubmitted DATETIME NOT NULL,
-         Explanation NVARCHAR NOT NULL
+         Explanation NVARCHAR(MAX) NOT NULL
 
         );
+		
 create table OnlineReservation (
 Id INT PRIMARY KEY IDENTITY (1,1),
     Name NVARCHAR(100) NOT NULL,
@@ -426,3 +427,5 @@ select * from RoomReservation
 select * from Raport
 
 drop table Raport
+
+select * from Sherbimi

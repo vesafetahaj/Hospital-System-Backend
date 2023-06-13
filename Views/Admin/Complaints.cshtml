@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using Hospital_System_Management.Models
+@model List<ComplaintModel>
+
+<style>
+    .table-striped-light-pink {
+        background-color: #FFD2E5;
+    }
+
+    .thead-dark {
+        background-color: #343a40;
+        color: #fff;
+    }
+</style>
+
+<div id="main">
+    <h1>Complaints from patients!!!</h1>
+    <table class="table table-bordered table-striped-light-pink table-hover table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Date</th>
+                <th>Explanation</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var complaint in Model)
+            {
+                <tr>
+                    <td>@complaint.Name</td>
+                    <td>@complaint.Surname</td>
+                    <td>@complaint.DateSubmitted</td>
+                    <td>@complaint.Explanation</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
