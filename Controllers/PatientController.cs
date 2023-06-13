@@ -27,10 +27,7 @@ namespace Hospital_System_Management.Controllers
         {
             return View();
         }
-        public IActionResult Raporti()
-        {
-            return View();
-        }
+
 
         public IActionResult Rezervimi()
         {
@@ -238,6 +235,14 @@ namespace Hospital_System_Management.Controllers
         public IActionResult CreateSuccessA()
         {
             return View();
+        }
+
+        //raporti
+        public ActionResult Raporti()
+        {
+            var raports = _context.Raport.ToList();
+            return View(raports);
+
         }
     }
 

@@ -13,7 +13,7 @@
     }
 
     body {
-        background:white;
+        background: #B0E0E6;
     }
 
     body, input, textarea, a {
@@ -38,19 +38,20 @@
 
     .form {
         width: 65%;
-        margin-left:200px;
+        margin-left: 200px;
         padding: 40px 25px 35px 25px;
-        border-radius: 30px ;
-        background: #b6e1e0;
+        border-radius: 30px;
+        background: rgb(135,206,250);
     }
-    .form h1{
-            color: #68bde1;
-          font-family:Arial, Helvetica, sans-serif;
-          font-size:28px;
-          margin-top:10px;
-          margin-bottom:10px;
-          text-align:center;
-    }
+
+        .form h1 {
+            color: rgb(30,144,255);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 28px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
 
         .form h2 {
             color: #68bde1);
@@ -99,9 +100,7 @@
         box-shadow: inset 8px 8px 8px #ecf0f3, inset -8px -8px 8px #ffff;
     }
 
-    .form-fields .form-group:last-child {
-        width: 96%;
-    }
+
 
     .submit-button {
         width: 96%;
@@ -127,7 +126,6 @@
     <section id="section">
         <div class="box">
             <div class="info">
-               
             </div>
             <div class="form">
                 <h1>Book Appointment!</h1>
@@ -151,7 +149,7 @@
                             @Html.TextBoxFor(model => model.Sherbimi, new { @class = "phone", placeholder = "Services" })
                         </div>
                         <div class="form-group">
-                            @Html.TextBoxFor(model => model.DateSubmitted, new {@type="date", placeholder = "Date Submitted" })
+                            @Html.TextBoxFor(model => model.DateSubmitted, new {@type="date", placeholder = "Date" })
                         </div>
                     </div>
                     <input type="submit" value="Send message" class="submit-button" name="save">

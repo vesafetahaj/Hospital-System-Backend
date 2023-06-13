@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Hospital_System_Management.Controllers
 {
-    [Authorize(Roles ="Doctor")]
+    [Authorize(Roles = "Doctor")]
     public class DoctorController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -112,14 +112,14 @@ namespace Hospital_System_Management.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(RaportModel model)
+        public IActionResult CreateD(RaportModel model)
         {
             if (ModelState.IsValid)
             {
                 model.Birthday = DateTime.Now;
                 _context.Raport.Add(model);
                 _context.SaveChanges();
-                return RedirectToAction("CreateSuccessO");
+                return RedirectToAction("CreateSuccessD");
             }
 
             return View(model);
@@ -127,12 +127,12 @@ namespace Hospital_System_Management.Controllers
         [HttpGet]
         public IActionResult Success()
         {
-            var reserve = _context.Raport.ToList();
-            return View(reserve);
+            var raport = _context.Raport.ToList();
+            return View(raport);
         }
         [HttpGet]
 
-        public IActionResult CreateSuccessO()
+        public IActionResult CreateSuccessD()
         {
             return View();
         }

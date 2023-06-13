@@ -1,4 +1,4 @@
-USE [master]
+USE [HOSPITAL]
 GO
 
 /****** Object:Database [HOSPITAL]    Script Date: 6/4/2023 2:03:26 PM ******/
@@ -424,3 +424,5 @@ CREATE TABLE Raport (
 select * from OnlineReservation
 select * from RoomReservation
 select * from Raport
+
+drop table Raport

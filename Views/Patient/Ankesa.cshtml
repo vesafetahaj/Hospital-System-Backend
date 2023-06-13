@@ -13,7 +13,7 @@
     }
 
     body {
-        background:white;
+        background: #b6e1e0;
     }
 
     body, input, textarea, a {
@@ -27,30 +27,28 @@
 
     .box {
         position: relative;
-        display: table;
         width: 1100px;
         margin: auto;
         margin-top: 35px;
-        border-radius: 30px;
     }
 
 
 
     .form {
         width: 65%;
-        margin-left:200px;
-        padding: 40px 25px 35px 25px;
-        border-radius: 30px ;
-        background: #b6e1e0;
+        margin-left: 200px;
+        padding: 35px 25px 35px 25px;
+        background: white;
     }
-    .form h1{
+
+        .form h1 {
             color: #68bde1;
-          font-family:Arial, Helvetica, sans-serif;
-          font-size:28px;
-          margin-top:10px;
-          margin-bottom:10px;
-          text-align:center;
-    }
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 28px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
 
         .form h2 {
             color: mintcream);
@@ -68,35 +66,41 @@
         letter-spacing: 0.5px;
     }
 
-    .form-fields {
-        display: table;
-        width: 100%;
-        padding: 15px 5px 5px 5px;
+
+
+    .form-fields input,
+    .form-fields textarea {
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 18px;
+        padding: 20px 10px 20px 5px;
+        width: 70%;
     }
 
-        .form-fields input,
-        .form-fields textarea {
-            border: none;
-            outline: none;
-            background: none;
-            font-size: 18px;
-            color: #555;
-            padding: 20px 10px 20px 5px;
-            width: 100%;
-        }
-
-        .form-fields textarea {
-            height: 150px;
-            resize: none;
-        }
+    .form-fields textarea {
+        height: 150px;
+        resize: none;
+    }
 
     .form-group {
-        width: 46%;
-        float: left;
-        padding: 0px 30px;
+        width: 16%;
+        padding: 0px 15px;
         margin: 14px 2px;
-        border-radius: 25px;
-        box-shadow: inset 8px 8px 8px #ecf0f3, inset -8px -8px 8px #ffff;
+        border-radius: 5px;
+        box-shadow: inset 2px 2px 2px gray;
+    }
+
+    .form-fields .form-group:first-child {
+        width: 96%;
+    }
+
+    .form-fields .form-group:nth-child(2) {
+        width: 96%;
+    }
+
+    .form-fields .form-group:nth-child(3) {
+        width: 96%;
     }
 
     .form-fields .form-group:last-child {
@@ -104,9 +108,9 @@
     }
 
     .submit-button {
-        width: 96%;
+        width: 45%;
         height: 60px;
-        margin: 0px 12px;
+        margin-left: 28%;
         border-radius: 30px;
         font-size: 20px;
         font-weight: 700;
@@ -120,14 +124,13 @@
     }
 
         .submit-button:hover {
-            background: #56cfd2;
+            background: lightblue;
         }
 </style>
 <div id="main">
     <section id="section">
         <div class="box">
             <div class="info">
-               
             </div>
             <div class="form">
                 <h1>Dear Patient,you can write your complaints here!</h1>
@@ -147,8 +150,8 @@
                         <div class="form-group">
                             @Html.TextAreaFor(model => model.Explanation, new { @class = "explanation", placeholder = "Explanation" })
                         </div>
-                      
-                     
+
+
                     </div>
                     <input type="submit" value="Send complaint" class="submit-button" name="save">
                 </form>
