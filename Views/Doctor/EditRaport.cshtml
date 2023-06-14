@@ -20,7 +20,7 @@
                     </div>
                     <div class="form-group">
                         <label for="Birthday">Birthday</label>
-                        <input type="datetime" class="form-control" id="Birthday" name="Birthday" value="@Model.Birthday" />
+                        <input type="datetime" class="form-control" id="Birthday" name="Birthday" value="@Model.Birthday.ToString("yyyy-MM-dd")" />
                     </div>
                     <div class="form-group">
                         <label for="Birthplace">Birthplace</label>
@@ -33,7 +33,7 @@
 
 
 
-
+                    <br />
                     <button type="submit" class="btn btn-primary">Save</button>
                 </form>
             </div>
